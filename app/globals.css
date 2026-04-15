@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f7f9;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-canvas: var(--background);
+  --color-ink: var(--foreground);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(circle at 100% 0%, #dbeafe 0%, transparent 30%),
+    radial-gradient(circle at 0% 100%, #e2e8f0 0%, transparent 40%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, sans-serif;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+a,
+button,
+select,
+summary,
+[role="button"] {
+  cursor: pointer;
+}
