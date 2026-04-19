@@ -55,8 +55,8 @@ export function SongViewer({ content }: SongViewerProps) {
         </div>
       </div>
 
-      <div className="fixed bottom-2 left-1/2 z-40 w-[min(94vw,720px)] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-white/92 p-2 sm:p-3 shadow-lg backdrop-blur">
-        <div className="flex flex-col gap-1 sm:gap-2">
+      <div className="fixed bottom-4 md:bottom-2 left-1/2 z-40 w-[min(85vw,720px)] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-zinc-100/90 p-2 sm:p-3 shadow-lg backdrop-blur-sm">
+        <div className="flex flex-col gap-1 sm:gap-2 px-2 py-3">
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             <Button
               type="button"
