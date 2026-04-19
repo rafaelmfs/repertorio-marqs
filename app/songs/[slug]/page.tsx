@@ -34,7 +34,7 @@ export default async function SongPage({ params }: SongPageProps) {
           </Button>
         </div>
 
-        <Card>
+        <Card className="p-0">
           <SongViewer content={song.content} />
         </Card>
       </main>

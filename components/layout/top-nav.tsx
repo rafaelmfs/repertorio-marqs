@@ -1,3 +1,4 @@
+import { SongMarkdownComposer } from "@/components/layout/song-markdown-composer";
 import { Button } from "@/components/ui/button";
 import { APP_ROUTES } from "@/lib/types/song.types";
 import Link from "next/link";
@@ -10,6 +11,9 @@ export function TopNav() {
           Repertorio
         </Link>
         <nav className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <SongMarkdownComposer />
+          </div>
           <Button asChild variant="ghost" size="sm">
             <Link href={APP_ROUTES.home}>Musicas</Link>
           </Button>

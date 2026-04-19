@@ -1,15 +1,22 @@
 "use client";
 
 import { pxPerFrame } from "@/lib/services/auto-scroll.service";
+import type { RefObject } from "react";
 import { useEffect, useRef } from "react";
 
 type UseAutoScrollOptions = {
   active: boolean;
   speed: number;
+  targetRef: RefObject<HTMLElement | null>;
   onEnd?: () => void;
 };
 
-export function useAutoScroll({ active, speed, onEnd }: UseAutoScrollOptions) {
+export function useAutoScroll({
+  active,
+  speed,
+  targetRef,
+  onEnd,
+}: UseAutoScrollOptions) {
   const frameRef = useRef<number | null>(null);
   const lastTsRef = useRef<number | null>(null);
 
@@ -23,8 +30,16 @@ export function useAutoScroll({ active, speed, onEnd }: UseAutoScrollOptions) {
       return;
     }
 
-    const maxY = () =>
-      Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const getTarget = () => targetRef.current;
+
+    const maxY = () => {
+      const target = getTarget();
+      if (!target) {
+        return 0;
+      }
+
+      return Math.max(0, target.scrollHeight - target.clientHeight);
+    };
 
     const tick = (ts: number) => {
       if (lastTsRef.current === null) {
@@ -34,8 +49,14 @@ export function useAutoScroll({ active, speed, onEnd }: UseAutoScrollOptions) {
       const deltaMs = ts - lastTsRef.current;
       lastTsRef.current = ts;
 
-      const nextY = Math.min(window.scrollY + pxPerFrame(speed, deltaMs), maxY());
-      window.scrollTo({ top: nextY });
+      const target = getTarget();
+      if (!target) {
+        onEnd?.();
+        return;
+      }
+
+      const nextY = Math.min(target.scrollTop + pxPerFrame(speed, deltaMs), maxY());
+      target.scrollTop = nextY;
 
       if (nextY >= maxY()) {
         onEnd?.();
@@ -54,5 +75,5 @@ export function useAutoScroll({ active, speed, onEnd }: UseAutoScrollOptions) {
       frameRef.current = null;
       lastTsRef.current = null;
     };
-  }, [active, speed, onEnd]);
+  }, [active, speed, targetRef, onEnd]);
 }

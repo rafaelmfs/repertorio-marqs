@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { IconArrowDown, IconArrowUp, IconTrash } from "@/components/ui/icons";
+import { IconArrowDown, IconArrowUp, IconExternal, IconTrash } from "@/components/ui/icons";
 import type { Setlist } from "@/lib/types/song.types";
+import Link from "next/link";
 
 type SetlistCardProps = {
   setlist: Setlist;
@@ -35,34 +36,42 @@ export function SetlistCard({
         {setlist.songs.map((slug, index) => (
           <li
             key={`${setlist.id}-${slug}`}
-            className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2"
+            className="flex flex-col items-start md:items-center md:flex-row gap-3 justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2"
           >
-            <span className="text-sm text-slate-700">{slug}</span>
-            <div className="flex items-center gap-1">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => onMoveSong(setlist.id, index, index - 1)}
-              >
-                <IconArrowUp className="h-3.5 w-3.5" />
-                Subir
+            <span className="text-sm text-slate-700 whitespace-nowrap">{slug}</span>
+            <div className="flex w-full items-center justify-between gap-1">
+              <Button asChild variant="outline" size="sm">
+                <Link href={`/songs/${slug}`}>
+                  <IconExternal className="h-3.5 w-3.5" />
+                  Abrir
+                </Link>
               </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => onMoveSong(setlist.id, index, index + 1)}
-              >
-                <IconArrowDown className="h-3.5 w-3.5" />
-                Descer
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => onRemoveSong(setlist.id, slug)}
-              >
-                <IconTrash className="h-3.5 w-3.5" />
-                Remover
-              </Button>
+              <div className="flex items-center gap-1">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => onMoveSong(setlist.id, index, index - 1)}
+                >
+                  <IconArrowUp className="h-3.5 w-3.5" />
+                  <span className="hidden md:inline">Subir</span>
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => onMoveSong(setlist.id, index, index + 1)}
+                >
+                  <IconArrowDown className="h-3.5 w-3.5" />
+                  <span className="hidden md:inline">Descer</span>
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => onRemoveSong(setlist.id, slug)}
+                >
+                  <IconTrash className="h-3.5 w-3.5" />
+                  <span className="hidden md:inline">Remover</span>
+                </Button>
+              </div>
             </div>
           </li>
         ))}

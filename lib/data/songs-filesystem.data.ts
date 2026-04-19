@@ -7,6 +7,17 @@ import path from "node:path";
 
 const SONGS_DIRECTORY = path.join(process.cwd(), "songs");
 
+export function normalizeSongContent(content: string): string {
+  const trimmedContent = content.trim();
+
+  const preWrappedContent = trimmedContent.match(/^<pre>\s*([\s\S]*?)\s*<\/pre>$/i);
+  if (!preWrappedContent) {
+    return content.trimEnd();
+  }
+
+  return preWrappedContent[1].trimEnd();
+}
+
 async function readSongFile(filePath: string): Promise<Song> {
   const raw = await fs.readFile(filePath, "utf8");
   const parsed = matter(raw);
@@ -20,7 +31,7 @@ async function readSongFile(filePath: string): Promise<Song> {
     slug: data.slug,
     title: data.title,
     artist: data.artist,
-    content: parsed.content.trimEnd(),
+    content: normalizeSongContent(parsed.content),
   };
 }
 

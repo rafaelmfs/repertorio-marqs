@@ -14,13 +14,48 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html,
 body {
-  background:
+  min-height: 100%;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  background-image:
     radial-gradient(circle at 100% 0%, #dbeafe 0%, transparent 30%),
-    radial-gradient(circle at 0% 100%, #e2e8f0 0%, transparent 40%),
-    var(--background);
+    radial-gradient(circle at 0% 100%, #e2e8f0 0%, transparent 40%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, sans-serif;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.28) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(100, 116, 139, 0.24);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.38);
 }
 
 @keyframes toastIn {
@@ -41,4 +76,27 @@ select,
 summary,
 [role="button"] {
   cursor: pointer;
+}
+
+.song-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 116, 139, 0.35) transparent;
+}
+
+.song-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.song-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.song-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(100, 116, 139, 0.28);
+}
+
+.song-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.42);
 }

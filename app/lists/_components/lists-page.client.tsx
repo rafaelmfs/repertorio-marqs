@@ -2,12 +2,14 @@
 
 import { SetlistCard } from "@/components/lists/setlist-card";
 import { SongCard } from "@/components/songs/song-card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { IconList, IconPlus } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { ToastStack } from "@/components/ui/toast";
 import { useFavorites } from "@/lib/hooks/use-favorites";
 import { useSetlists } from "@/lib/hooks/use-setlists";
+import { useSongSearch } from "@/lib/hooks/use-song-search";
 import { useToast } from "@/lib/hooks/use-toast";
 import type { SongListItem } from "@/lib/types/song.types";
 import { useState } from "react";
@@ -20,6 +22,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
   const [newListName, setNewListName] = useState("");
   const { orderedSetlists, createNewSetlist, deleteSetlist, addSong, moveSong, removeSong } =
     useSetlists();
+  const { query, setQuery, filteredSongs } = useSongSearch(songs);
   const { isSlugFavorite, toggleFavorite } = useFavorites();
   const { toasts, pushToast, removeToast } = useToast();
 
@@ -39,12 +42,6 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
     setNewListName("");
   }
 
-  function handleAddSongToSetlist(slug: string, setlistId: string) {
-    addSong(setlistId, slug);
-    const setlistName = orderedSetlists.find((setlist) => setlist.id === setlistId)?.name;
-    pushToast(`Musica adicionada em \"${setlistName ?? "lista"}\"`);
-  }
-
   function handleDeleteSetlist(setlistId: string) {
     const setlistName = orderedSetlists.find((setlist) => setlist.id === setlistId)?.name;
     deleteSetlist(setlistId);
@@ -56,19 +53,25 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
     pushToast(`Musica \"${slug}\" removida da lista`);
   }
 
+  function handleAddSongToSetlist(slug: string, setlistId: string) {
+    addSong(setlistId, slug);
+    const setlistName = orderedSetlists.find((setlist) => setlist.id === setlistId)?.name;
+    pushToast(`Musica adicionada em \"${setlistName ?? "lista"}\"`);
+  }
+
   return (
-    <section className="space-y-8">
+    <section className="space-y-6 sm:space-y-8">
       <div className="space-y-2">
-        <h1 className="flex items-center gap-2 text-2xl font-semibold text-slate-900">
+        <h1 className="flex items-center gap-2 text-xl sm:text-2xl font-semibold text-slate-900">
           <IconList className="h-5 w-5" />
           Listas
         </h1>
-        <p className="text-sm text-slate-600">
-          Crie listas de culto ou ensaio e adicione musicas com um clique.
+        <p className="text-xs sm:text-sm text-slate-600">
+          Crie listas, reorganize a ordem das musicas e abra cada cifra direto por aqui.
         </p>
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
         <div className="flex flex-col gap-2 sm:flex-row">
           <Input
             placeholder="Nome da lista"
@@ -77,34 +80,68 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
           />
           <Button onClick={handleCreateSetlist}>
             <IconPlus className="h-3.5 w-3.5" />
-            Criar lista
+            Lista
           </Button>
         </div>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        {songs.map((song) => (
-          <SongCard
-            key={song.slug}
-            song={song}
-            isFavorite={isSlugFavorite(song.slug)}
-            onToggleFavorite={toggleFavorite}
-            onAddToList={handleAddSongToSetlist}
-            setlistOptions={setlistOptions}
-          />
-        ))}
-      </div>
+      <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
+          <div className="mb-3 sm:mb-4 flex items-end justify-between gap-2 sm:gap-3">
+            <div className="space-y-1">
+              <h2 className="text-base sm:text-lg font-semibold text-slate-900">Listas criadas</h2>
+              <p className="text-xs sm:text-sm text-slate-600">
+                Reordene, abra a cifra ou remova musicas.
+              </p>
+            </div>
+            <Badge>{orderedSetlists.length} listas</Badge>
+          </div>
 
-      <div className="space-y-3">
-        {orderedSetlists.map((setlist) => (
-          <SetlistCard
-            key={setlist.id}
-            setlist={setlist}
-            onDelete={handleDeleteSetlist}
-            onMoveSong={moveSong}
-            onRemoveSong={handleRemoveSongFromSetlist}
-          />
-        ))}
+          <div className="song-scrollbar max-h-[65vh] space-y-3 overflow-y-auto pr-1">
+            {orderedSetlists.map((setlist) => (
+              <SetlistCard
+                key={setlist.id}
+                setlist={setlist}
+                onDelete={handleDeleteSetlist}
+                onMoveSong={moveSong}
+                onRemoveSong={handleRemoveSongFromSetlist}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
+          <div className="mb-3 sm:mb-4 flex items-end justify-between gap-2 sm:gap-3">
+            <div className="space-y-1">
+              <h2 className="text-base sm:text-lg font-semibold text-slate-900">Musicas</h2>
+              <p className="text-xs sm:text-sm text-slate-600">
+                Busque uma musica e adicione na lista sem sair desta tela.
+              </p>
+            </div>
+            <Badge className="whitespace-nowrap">{filteredSongs?.length} resultados</Badge>
+          </div>
+
+          <div className="space-y-2 sm:space-y-3">
+            <Input
+              placeholder="Buscar musica por titulo ou artista"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+            />
+
+            <div className="song-scrollbar max-h-[55vh] sm:max-h-[65vh] space-y-2 sm:space-y-3 overflow-y-auto pr-1">
+              {filteredSongs.map((song) => (
+                <SongCard
+                  key={song.slug}
+                  song={song}
+                  isFavorite={isSlugFavorite(song.slug)}
+                  onToggleFavorite={toggleFavorite}
+                  onAddToList={orderedSetlists.length > 0 ? handleAddSongToSetlist : undefined}
+                  setlistOptions={setlistOptions}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <ToastStack toasts={toasts} onDismiss={removeToast} />

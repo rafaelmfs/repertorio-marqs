@@ -60,21 +60,23 @@ export function SongCard({
         {isFavorite ? <Badge>Favorita</Badge> : null}
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        <Button asChild variant="outline" size="sm">
-          <Link href={`/songs/${song.slug}`}>
-            <IconExternal className="h-3.5 w-3.5" />
-            Abrir cifra
-          </Link>
-        </Button>
-        <Button
-          variant={isFavorite ? "solid" : "ghost"}
-          size="sm"
-          onClick={() => onToggleFavorite(song.slug)}
-        >
-          <IconStar className="h-3.5 w-3.5" />
-          {isFavorite ? "Desfavoritar" : "Favoritar"}
-        </Button>
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-wrap gap-2">
+          <Button asChild variant="outline" size="sm">
+            <Link href={`/songs/${song.slug}`}>
+              <IconExternal className="h-3.5 w-3.5" />
+              <span className="hidden md:inline">Abrir cifra</span>
+            </Link>
+          </Button>
+          <Button
+            variant={isFavorite ? "solid" : "ghost"}
+            size="sm"
+            onClick={() => onToggleFavorite(song.slug)}
+          >
+            <IconStar className="h-3.5 w-3.5" />
+            <span className="hidden md:inline">{isFavorite ? "Desfavoritar" : "Favoritar"}</span>
+          </Button>
+        </div>
         {onAddToList ? (
           <div className="flex flex-1 flex-wrap items-center gap-2">
             <Select
@@ -107,7 +109,7 @@ export function SongCard({
               disabled={!canAddToList}
             >
               <IconPlus className="h-3.5 w-3.5" />
-              Adicionar
+              <span className="hidden md:inline">Adicionar</span>
             </Button>
           </div>
         ) : null}

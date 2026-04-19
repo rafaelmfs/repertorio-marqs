@@ -25,5 +25,10 @@ describe("SetlistCard", () => {
 
     fireEvent.click(screen.getByRole("button", { name: "Remover" }));
     expect(onRemoveSong).toHaveBeenCalledWith("a", "gratidao");
+
+    expect(screen.getByRole("link", { name: "Abrir" })).toHaveAttribute(
+      "href",
+      "/songs/gratidao",
+    );
   });
 });

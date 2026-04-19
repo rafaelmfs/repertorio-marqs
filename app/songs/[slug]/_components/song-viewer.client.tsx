@@ -1,5 +1,6 @@
 "use client";
 
+import { SongMarkdownContent } from "@/components/songs/song-markdown-content";
 import { Button } from "@/components/ui/button";
 import { IconArrowDown, IconArrowUp, IconPause, IconPlay } from "@/components/ui/icons";
 import { useAutoScroll } from "@/lib/hooks/use-auto-scroll";
@@ -9,7 +10,7 @@ import {
   AUTO_SCROLL_SPEED,
   clampAutoScrollSpeed,
 } from "@/lib/services/auto-scroll.service";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 type SongViewerProps = {
   content: string;
@@ -17,6 +18,7 @@ type SongViewerProps = {
 
 export function SongViewer({ content }: SongViewerProps) {
   const [isAutoScrolling, setIsAutoScrolling] = useState(false);
+  const songContainerRef = useRef<HTMLDivElement | null>(null);
   const [speed, setSpeed] = usePersistentState<number>(
     "repertorio:auto-scroll-speed",
     AUTO_SCROLL_SPEED.default,
@@ -27,6 +29,7 @@ export function SongViewer({ content }: SongViewerProps) {
   useAutoScroll({
     active: isAutoScrolling,
     speed: clampedSpeed,
+    targetRef: songContainerRef,
     onEnd: () => setIsAutoScrolling(false),
   });
 
@@ -37,53 +40,61 @@ export function SongViewer({ content }: SongViewerProps) {
   }
 
   function handleBackToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    songContainerRef.current?.scrollTo({ top: 0, behavior: "smooth" });
     setIsAutoScrolling(false);
   }
 
   return (
     <div>
-      <pre className="overflow-x-auto whitespace-pre pb-36 text-sm leading-7 text-slate-800">
-        {content}
-      </pre>
+      <div
+        ref={songContainerRef}
+        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto overflow-x-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8"
+      >
+        <div className="pb-40 sm:pb-44 text-sm">
+          <SongMarkdownContent content={content} />
+        </div>
+      </div>
 
-      <div className="fixed bottom-3 right-3 z-40 w-[min(92vw,420px)] rounded-xl border border-slate-200 bg-white/92 p-3 shadow-lg backdrop-blur">
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap items-center gap-2">
+      <div className="fixed bottom-2 left-1/2 z-40 w-[min(94vw,720px)] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-white/92 p-2 sm:p-3 shadow-lg backdrop-blur">
+        <div className="flex flex-col gap-1 sm:gap-2">
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             <Button
               type="button"
               variant={isAutoScrolling ? "solid" : "outline"}
-              size="sm"
+              size="md"
+              className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3"
               onClick={() => setIsAutoScrolling((current) => !current)}
             >
               {isAutoScrolling ? (
                 <>
-                  <IconPause className="h-3.5 w-3.5" />
-                  Pausar
+                  <IconPause className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                  <span className="sm:inline">Pausar</span>
+                  <span className="">⏸</span>
                 </>
               ) : (
                 <>
-                  <IconPlay className="h-3.5 w-3.5" />
-                  Iniciar
+                  <IconPlay className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                  <span className="sm:inline">Iniciar</span>
                 </>
               )}
             </Button>
-            <Button type="button" variant="ghost" size="sm" onClick={handleBackToTop}>
-              <IconArrowUp className="h-3.5 w-3.5" />
-              Topo
+            <Button type="button" variant="ghost" size="sm" className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3" onClick={handleBackToTop}>
+              <IconArrowUp className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+              <span className="sm:inline">Topo</span>
             </Button>
-            <span className="ml-auto rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-600">
+            <span className="ml-auto rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600">
               {speedLabel}
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
             {AUTO_SCROLL_PRESETS.map((preset) => (
               <Button
                 key={preset.label}
                 type="button"
                 variant={clampedSpeed === preset.value ? "solid" : "ghost"}
                 size="sm"
+                className="text-xs h-7 sm:h-8 px-2 sm:px-3"
                 onClick={() => setSpeedSafe(preset.value)}
               >
                 {preset.label}

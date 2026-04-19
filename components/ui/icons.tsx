@@ -125,3 +125,33 @@ export function IconPause(props: IconProps) {
     </BaseIcon>
   );
 }
+
+export function IconCopy(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <rect x="9" y="9" width="11" height="11" rx="2" />
+      <path d="M5 15V6a2 2 0 0 1 2-2h9" />
+    </BaseIcon>
+  );
+}
+
+export function IconFileText(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+      <path d="M14 2v5h5" />
+      <path d="M9 13h6" />
+      <path d="M9 17h6" />
+      <path d="M9 9h1" />
+    </BaseIcon>
+  );
+}
+
+export function IconClose(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </BaseIcon>
+  );
+}
