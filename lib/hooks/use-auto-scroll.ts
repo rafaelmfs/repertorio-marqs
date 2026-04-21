@@ -19,6 +19,7 @@ export function useAutoScroll({
 }: UseAutoScrollOptions) {
   const frameRef = useRef<number | null>(null);
   const lastTsRef = useRef<number | null>(null);
+  const virtualYRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!active) {
@@ -27,6 +28,7 @@ export function useAutoScroll({
       }
       frameRef.current = null;
       lastTsRef.current = null;
+      virtualYRef.current = null;
       return;
     }
 
@@ -51,14 +53,27 @@ export function useAutoScroll({
 
       const target = getTarget();
       if (!target) {
+        virtualYRef.current = null;
         onEnd?.();
         return;
       }
 
-      const nextY = Math.min(target.scrollTop + pxPerFrame(speed, deltaMs), maxY());
+      const maxScrollY = maxY();
+
+      if (virtualYRef.current === null) {
+        virtualYRef.current = target.scrollTop;
+      }
+
+      const nextY = Math.min(
+        virtualYRef.current + pxPerFrame(speed, deltaMs),
+        maxScrollY,
+      );
+
+      virtualYRef.current = nextY;
       target.scrollTop = nextY;
 
-      if (nextY >= maxY()) {
+      if (nextY >= maxScrollY) {
+        virtualYRef.current = null;
         onEnd?.();
         return;
       }
@@ -74,6 +89,7 @@ export function useAutoScroll({
       }
       frameRef.current = null;
       lastTsRef.current = null;
+      virtualYRef.current = null;
     };
   }, [active, speed, targetRef, onEnd]);
 }

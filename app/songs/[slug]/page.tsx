@@ -1,10 +1,8 @@
 import { SongViewer } from "@/app/songs/[slug]/_components/song-viewer.client";
+import { BackButton } from "@/components/back-button";
 import { TopNav } from "@/components/layout/top-nav";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { APP_ROUTES } from "@/lib/types/song.types";
 import { getSongDetailViewModel } from "@/lib/viewmodels/songs.view-model";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type SongPageProps = {
@@ -29,9 +27,7 @@ export default async function SongPage({ params }: SongPageProps) {
             <h1 className="text-2xl font-semibold text-slate-900">{song.title}</h1>
             <p className="text-sm text-slate-600">{song.artist ?? "Artista nao informado"}</p>
           </div>
-          <Button asChild variant="outline" size="sm">
-            <Link href={APP_ROUTES.home}>Voltar</Link>
-          </Button>
+          <BackButton />
         </div>
 
         <Card className="p-0">

@@ -69,7 +69,6 @@ export function SongViewer({ content }: SongViewerProps) {
                 <>
                   <IconPause className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   <span className="sm:inline">Pausar</span>
-                  <span className="">⏸</span>
                 </>
               ) : (
                 <>

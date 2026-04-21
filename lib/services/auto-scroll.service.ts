@@ -1,14 +1,14 @@
 export const AUTO_SCROLL_SPEED = {
-  min: 10,
+  min: 1,
   max: 220,
-  step: 10,
-  default: 60,
+  step: 1,
+  default: 20,
 } as const;
 
 export const AUTO_SCROLL_PRESETS = [
-  { label: "Lenta", value: 40 },
-  { label: "Media", value: 80 },
-  { label: "Rapida", value: 130 },
+  { label: "Lenta", value: 10 },
+  { label: "Media", value: 20 },
+  { label: "Rapida", value: 40 },
 ] as const;
 
 export function clampAutoScrollSpeed(value: number): number {
