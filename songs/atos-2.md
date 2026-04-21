@@ -1,0 +1,146 @@
+---
+slug: atos-2
+title: Atos 2
+artist: Gabriela Rocha
+---
+
+[Intro] Em7  C9  G  G9/B
+        Em7  C9  G  G9/B
+
+[Primeira Parte] 
+
+       Em7
+Nós estamos aqui
+       C9
+Tão sedentos de Ti
+        G            G9/B
+Vem oh Deus, vem oh Deus
+      Em7
+Enche este lugar
+       C9
+Meu desejo é sentir
+       G          G9/B
+Teu poder, Teu poder
+
+( Em7  C9  G  G9/B )
+
+       Em7
+Nós estamos aqui
+       C9
+Tão sedentos de Ti
+        G            G9/B
+Vem oh Deus, vem oh Deus
+      Em7
+Enche este lugar
+       C9
+Meu desejo é sentir
+       G          D4
+Teu poder, Teu poder
+
+[Refrão] 
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4
+Tua glória contemplar
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4
+Tua glória contemplar
+
+( C9  Em7  G  C9  D4 )
+
+[Primeira Parte] 
+
+       Em7
+Nós estamos aqui
+       C9
+Tão sedentos de Ti
+        G            G9/B
+Vem oh Deus, vem oh Deus
+      Em7
+Enche este lugar
+       C9
+Meu desejo é sentir
+       G          D4
+Teu poder, Teu poder
+
+[Refrão] 
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4
+Tua glória contemplar
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4
+Tua glória contemplar
+
+( C9  Em7  G  C9  D4 )
+
+[Segunda Parte] 
+
+          C9
+Te damos honra
+           Em7
+Te damos glória
+           G  C9
+Teu é o poder
+              D4
+Pra sempre, amém
+
+          C9
+Te damos honra
+           Em7
+Te damos glória
+           G  C9
+Teu é o poder
+              D4
+Pra sempre, amém
+
+          C9
+Te damos honra
+           Em7
+Te damos glória
+           G  C9
+Teu é o poder
+              D4
+Pra sempre, amém
+
+[Refrão] 
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4
+Tua glória contemplar
+
+       C9           Em7
+Então vem me incendiar
+         G     C9    D4
+Meu coração é Teu altar
+         C9           Em7
+Quero ouvir o som do céu
+      G     C9     D4  C9
+Tua glória contemplar
