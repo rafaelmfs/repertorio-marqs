@@ -1,0 +1,157 @@
+---
+slug: me-ama
+title: Me Ama
+artist: Diante do Trono
+---
+
+[Intro] A  D/F#  E  D2
+
+[Dedilhado - Intro e Primeira Parte] 
+
+Parte 8 de 8
+
+[Primeira Parte]
+
+ A
+Tem ciúmes de mim
+D/F#
+O Seu amor é como um furacão
+  E             
+E eu me rendo 
+                       D2
+Ao vento de Sua misericórdia
+   A                
+Então, de repente 
+                          D/F#
+Não vejo mais minhas aflições
+
+Eu só vejo á glória
+      E
+E percebo quão maravilhoso Ele é
+     D2
+E o tanto que Ele me quer
+
+[Refrão]
+
+A           D/F#
+Ô, Ele me amou
+          E
+Ô, Ele me ama
+         D2
+Ele me amou
+
+[Tab - Solo 1] 
+
+( A  D/F#  E  D2 )
+
+[Primeira Parte]
+
+ A
+Tem ciúmes de mim
+D/F#
+O Seu amor é como um furacão
+  E             
+E eu me rendo 
+                       D2
+Ao vento de Sua misericórdia
+   A                
+Então, de repente 
+                          D/F#
+Não vejo mais minhas aflições
+
+Eu só vejo a glória
+      E
+E percebo quão maravilhoso Ele é
+     D2
+E o tanto que Ele me quer
+
+[Refrão]
+
+A           D/F#
+Ô, Ele me amou
+          E
+Ô, Ele me ama
+         D2
+Ele me amou
+
+[Solo 2]
+
+[Tab - Solo 2] 
+
+( A  D/F#  E  D2 )
+
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+
+[Segunda Parte]
+
+ A
+Somos sua herança 
+
+E Ele é o nosso galardão
+ D/F#
+Seu olhar de graça 
+
+Nos atrai à redenção
+       E        
+Se a graça é um oceano 
+            D2
+Estamos afogando
+
+   A
+O céu se une à terra 
+
+Como um beijo apaixonado
+     D/F#
+Meu coração dispara 
+
+Em meu peito, acelerado
+     E
+Não tenho tempo pra perder 
+
+Com ressentimentos
+        D2
+Quando penso que Ele
+
+[Refrão Final]
+
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+
+( A  D/F#  E  D2 )
+( A  D/F#  E  D2 )
+
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+   A           D/F#
+Me ama, Ele me ama
+       E           D2
+Ele me ama, Ele me ama
+
+( A  D/F#  E  D2 )
+( A  D/F#  E  D2 )
+
+A            D/F# 
+Oh, Ele me amou
+           E             D2
+Oh, Ele me ama, Ele me amou
+A            D/F# 
+Oh, Ele me amou
+           E
+Oh, Ele me ama
+         D2
+Ele me amou
