@@ -2,9 +2,9 @@
 
 import { SongCard } from "@/components/songs/song-card";
 import { Badge } from "@/components/ui/badge";
+import { IconClose } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { ToastStack } from "@/components/ui/toast";
-import { useFavorites } from "@/lib/hooks/use-favorites";
 import { useSetlists } from "@/lib/hooks/use-setlists";
 import { useSongSearch } from "@/lib/hooks/use-song-search";
 import { useToast } from "@/lib/hooks/use-toast";
@@ -17,7 +17,6 @@ type SongsPageClientProps = {
 
 export function SongsPageClient({ songs, total }: SongsPageClientProps) {
   const { query, setQuery, filteredSongs } = useSongSearch(songs);
-  const { isSlugFavorite, toggleFavorite } = useFavorites();
   const { orderedSetlists, addSong } = useSetlists();
   const { toasts, pushToast, removeToast } = useToast();
 
@@ -47,12 +46,26 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
         <label htmlFor="song-search" className="text-xs sm:text-sm font-medium text-slate-700">
           Buscar por titulo ou artista
         </label>
-        <Input
-          id="song-search"
-          placeholder="Ex.: gratidao"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
+        <div className="relative">
+          <Input
+            id="song-search"
+            placeholder="Ex.: gratidao"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            className="pr-10"
+          />
+          {query && (
+            <button
+              type="button"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+              onClick={() => setQuery("")}
+              aria-label="Limpar busca"
+              title="Limpar busca"
+            >
+              <IconClose className="h-4 w-4" />
+            </button>
+          )}
+        </div>
         <div className="flex gap-2">
           <Badge>{filteredSongs.length} encontradas</Badge>
           <Badge>{total} no total</Badge>
@@ -64,8 +77,6 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
           <SongCard
             key={song.slug}
             song={song}
-            isFavorite={isSlugFavorite(song.slug)}
-            onToggleFavorite={toggleFavorite}
             onAddToList={orderedSetlists.length > 0 ? handleAddSongToSetlist : undefined}
             setlistOptions={setlistOptions}
           />

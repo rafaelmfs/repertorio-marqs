@@ -1,12 +1,11 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { IconExternal, IconMusic, IconPlus, IconStar } from "@/components/ui/icons";
+import { IconMusic, IconPlus } from "@/components/ui/icons";
 import { Select } from "@/components/ui/select";
 import type { SongListItem } from "@/lib/types/song.types";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type SongSetlistOption = {
@@ -16,20 +15,18 @@ type SongSetlistOption = {
 
 type SongCardProps = {
   song: SongListItem;
-  isFavorite: boolean;
-  onToggleFavorite: (slug: string) => void;
   onAddToList?: (slug: string, setlistId: string) => void;
   setlistOptions?: SongSetlistOption[];
 };
 
 export function SongCard({
   song,
-  isFavorite,
-  onToggleFavorite,
   onAddToList,
   setlistOptions = [],
 }: SongCardProps) {
+  const router = useRouter();
   const [selectedSetlistId, setSelectedSetlistId] = useState<string>("");
+  const songHref = `/songs/${song.slug}`;
 
   useEffect(() => {
     if (setlistOptions.length === 0) {
@@ -51,37 +48,33 @@ export function SongCard({
   );
 
   return (
-    <Card className="space-y-3">
+    <Card
+      className="space-y-3 cursor-pointer"
+      role="link"
+      tabIndex={0}
+      aria-label={`Abrir musica ${song.title}`}
+      onClick={() => router.push(songHref)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          router.push(songHref);
+        }
+      }}
+    >
       <div className="flex items-start justify-between gap-3">
         <div className="space-y-1">
           <CardTitle>{song.title}</CardTitle>
           <CardDescription>{song.artist ?? "Artista nao informado"}</CardDescription>
         </div>
-        {isFavorite ? <Badge>Favorita</Badge> : null}
       </div>
 
       <div className="flex flex-col gap-2">
-        <div className="flex flex-wrap gap-2">
-          <Button asChild variant="outline" size="sm">
-            <Link href={`/songs/${song.slug}`}>
-              <IconExternal className="h-3.5 w-3.5" />
-              <span className="hidden md:inline">Abrir cifra</span>
-            </Link>
-          </Button>
-          <Button
-            variant={isFavorite ? "solid" : "ghost"}
-            size="sm"
-            onClick={() => onToggleFavorite(song.slug)}
-          >
-            <IconStar className="h-3.5 w-3.5" />
-            <span className="hidden md:inline">{isFavorite ? "Desfavoritar" : "Favoritar"}</span>
-          </Button>
-        </div>
+
         {onAddToList ? (
-          <div className="flex flex-1 flex-wrap items-center gap-2">
+          <div className="flex flex-1 items-center gap-2" onClick={(event) => event.stopPropagation()}>
             <Select
               aria-label={`Escolher lista para ${song.title}`}
-              className="h-8 min-w-44 max-w-56"
+              className="h-8 min-w-44 flex-1"
               value={selectedSetlistId}
               onChange={(event) => setSelectedSetlistId(event.target.value)}
               disabled={setlistOptions.length === 0}

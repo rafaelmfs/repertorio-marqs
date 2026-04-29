@@ -1,8 +1,35 @@
 import { SetlistCard } from "@/components/lists/setlist-card";
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+
+const push = vi.fn();
+
+vi.mock("next/navigation", () => ({
+  useRouter: () => ({
+    push,
+  }),
+}));
 
 describe("SetlistCard", () => {
+  beforeEach(() => {
+    push.mockClear();
+  });
+
+  it("navigates when clicking a song row", () => {
+    render(
+      <SetlistCard
+        setlist={{ id: "a", name: "Culto", songs: ["gratidao"] }}
+        onDelete={vi.fn()}
+        onMoveSong={vi.fn()}
+        onRemoveSong={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("link", { name: "Abrir musica gratidao" }));
+
+    expect(push).toHaveBeenCalledWith("/songs/gratidao");
+  });
+
   it("triggers callbacks for song operations", () => {
     const onDelete = vi.fn();
     const onMoveSong = vi.fn();
@@ -22,13 +49,10 @@ describe("SetlistCard", () => {
 
     fireEvent.click(screen.getByRole("button", { name: "Subir" }));
     expect(onMoveSong).toHaveBeenCalledWith("a", 0, -1);
+    expect(push).not.toHaveBeenCalled();
 
     fireEvent.click(screen.getByRole("button", { name: "Remover" }));
     expect(onRemoveSong).toHaveBeenCalledWith("a", "gratidao");
-
-    expect(screen.getByRole("link", { name: "Abrir" })).toHaveAttribute(
-      "href",
-      "/songs/gratidao",
-    );
+    expect(push).not.toHaveBeenCalled();
   });
 });

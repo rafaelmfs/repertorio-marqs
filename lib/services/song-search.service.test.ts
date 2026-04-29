@@ -19,4 +19,12 @@ describe("filterSongsByQuery", () => {
   it("matches by artist", () => {
     expect(filterSongsByQuery(songs, "projeto")).toEqual([songs[0]]);
   });
+
+  it("matches accented title with unaccented query", () => {
+    const accentedSongs = [
+      { slug: "x", title: "Naamã", artist: "Ministério" },
+    ];
+    expect(filterSongsByQuery(accentedSongs, "naama")).toEqual([accentedSongs[0]]);
+    expect(filterSongsByQuery(accentedSongs, "ministerio")).toEqual([accentedSongs[0]]);
+  });
 });

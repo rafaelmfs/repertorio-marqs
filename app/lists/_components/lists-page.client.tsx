@@ -4,7 +4,7 @@ import { SetlistCard } from "@/components/lists/setlist-card";
 import { SongCard } from "@/components/songs/song-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { IconList, IconPlus } from "@/components/ui/icons";
+import { IconClose, IconList, IconPlus } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { ToastStack } from "@/components/ui/toast";
 import { useFavorites } from "@/lib/hooks/use-favorites";
@@ -122,19 +122,31 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
           </div>
 
           <div className="space-y-2 sm:space-y-3">
-            <Input
-              placeholder="Buscar musica por titulo ou artista"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-            />
+            <div className="relative">
+              <Input
+                placeholder="Buscar musica por titulo ou artista"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                className="pr-10"
+              />
+              {query && (
+                <button
+                  type="button"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                  onClick={() => setQuery("")}
+                  aria-label="Limpar busca"
+                  title="Limpar busca"
+                >
+                  <IconClose className="h-4 w-4" />
+                </button>
+              )}
+            </div>
 
             <div className="song-scrollbar max-h-[55vh] sm:max-h-[65vh] space-y-2 sm:space-y-3 overflow-y-auto pr-1">
               {filteredSongs.map((song) => (
                 <SongCard
                   key={song.slug}
                   song={song}
-                  isFavorite={isSlugFavorite(song.slug)}
-                  onToggleFavorite={toggleFavorite}
                   onAddToList={orderedSetlists.length > 0 ? handleAddSongToSetlist : undefined}
                   setlistOptions={setlistOptions}
                 />
