@@ -50,15 +50,15 @@ export function SetlistCard({
               }
             }}
           >
-            <span className="text-sm text-slate-700 whitespace-nowrap">{slug}</span>
+            <span className="text-sm w-full text-slate-700 md:whitespace-nowrap">{slug}</span>
             <div
-              className="flex w-full items-center justify-between gap-1"
+              className="flex  items-center justify-between gap-1"
               onClick={(event) => event.stopPropagation()}
             >
               <div className="flex items-center gap-1">
                 <Button
                   variant="ghost"
-                  size="sm"
+                  size="xs"
                   onClick={() => onMoveSong(setlist.id, index, index - 1)}
                 >
                   <IconArrowUp className="h-3.5 w-3.5" />
@@ -66,7 +66,7 @@ export function SetlistCard({
                 </Button>
                 <Button
                   variant="ghost"
-                  size="sm"
+                  size="xs"
                   onClick={() => onMoveSong(setlist.id, index, index + 1)}
                 >
                   <IconArrowDown className="h-3.5 w-3.5" />
@@ -74,7 +74,7 @@ export function SetlistCard({
                 </Button>
                 <Button
                   variant="ghost"
-                  size="sm"
+                  size="xs"
                   onClick={() => onRemoveSong(setlist.id, slug)}
                 >
                   <IconTrash className="h-3.5 w-3.5" />
