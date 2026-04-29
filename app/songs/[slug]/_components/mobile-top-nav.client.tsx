@@ -19,7 +19,7 @@ export function MobileTopNav() {
 
       <div
         className={[
-          "sticky z-30 rounded-b-lg flex w-16 left-1/2 -translate-x-1/2 justify-center md:hidden border border-slate-200/90",
+          "absolute z-30 rounded-b-lg flex w-16 left-1/2 -translate-x-1/2 justify-center md:hidden border border-slate-200/90",
           isVisibleOnMobile
             ? "top-16  bg-white/80 backdrop-blur"
             : "top-0 bg-white/80 backdrop-blur",

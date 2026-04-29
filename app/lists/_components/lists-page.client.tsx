@@ -87,7 +87,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
 
       <div className="flex flex-col gap-3 sm:gap-4">
         <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
-          <div className="mb-3 sm:mb-4 flex items-end justify-between gap-2 sm:gap-3">
+          <div className="mb-3 sm:mb-4 flex flex-col md:flex-row md:items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
               <h2 className="text-base sm:text-lg font-semibold text-slate-900">Listas criadas</h2>
               <p className="text-xs sm:text-sm text-slate-600">
@@ -111,7 +111,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
         </div>
 
         <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
-          <div className="mb-3 sm:mb-4 flex items-end justify-between gap-2 sm:gap-3">
+          <div className="mb-3 sm:mb-4 flex flex-col md:flex-row items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
               <h2 className="text-base sm:text-lg font-semibold text-slate-900">Musicas</h2>
               <p className="text-xs sm:text-sm text-slate-600">

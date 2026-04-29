@@ -1,4 +1,3 @@
-import { MobileTopNav } from "@/app/songs/[slug]/_components/mobile-top-nav.client";
 import { SongViewer } from "@/app/songs/[slug]/_components/song-viewer.client";
 import { BackButton } from "@/components/back-button";
 import { Card } from "@/components/ui/card";
@@ -20,7 +19,6 @@ export default async function SongPage({ params }: SongPageProps) {
 
   return (
     <>
-      <MobileTopNav />
       <main className="mx-auto w-full max-w-5xl px-4 py-8">
         <div className="mb-4 flex items-center justify-between gap-2">
           <div>
