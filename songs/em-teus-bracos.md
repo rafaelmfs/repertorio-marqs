@@ -1,0 +1,157 @@
+---
+slug: em-teus-bracos
+title: Em Teus Braços
+artist: Laura Souguellis
+---
+
+[Intro] F7M  C7M  F7M
+        C7M  F7M  C7M
+
+[Primeira Parte]
+
+F7M
+    Segura estou nos braços
+                      C7M
+Daquele que nunca me deixou
+F7M
+    Seu amor perfeito sempre esteve
+              C7M
+Repousado em mim
+
+[Pré-Refrão]
+
+         G/B  Am
+E se eu pas__sar pelo vale
+            F7M           G
+Acharei conforto em Teu amor
+                Em7
+Pois eu sei que és aquele
+                    F7M   G
+Que me guarda, me guardas
+
+[Refrão]
+
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+
+[Primeira Parte]
+
+F7M
+    Segura estou nos braços
+                         C7M
+Daquele que nunca me deixou
+F7M
+    Seu amor perfeito sempre esteve
+              C7M
+Repousado em mim
+
+[Pré-Refrão]
+
+         G/B  Am
+E se eu pas__sar pelo vale
+            F7M           G
+Acharei conforto em Teu amor
+                Em7
+Pois eu sei que és aquele
+                    F7M   G
+Que me guarda, me guardas
+
+[Refrão]
+
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+
+[Segunda Parte]
+
+F7M
+    Recaio em Tua graça
+C7M
+    Recaio de novo em Tuas mãos
+F7M
+    Recaio em Tua graça
+C7M
+    Recaio de novo em Tuas mãos
+
+F7M
+    Recaio em Tua graça
+C7M
+    Recaio de novo em Tuas mãos
+F7M
+    Recaio em Tua graça
+C7M
+    Recaio de novo em Tuas mãos
+
+[Pré-Refrão]
+
+         G/B  Am
+E se eu pas__sar pelo vale
+            F7M           G
+Acharei conforto em Teu amor
+                Em7
+Pois eu sei que és aquele
+                    F7M   G
+Que me guarda, me guardas
+
+[Refrão]
+
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+               F7M
+Em Teus braços é meu descanso
+               C7M
+Em Teus braços é meu descanso
+
+[Final]
+
+F7M
+    O toque mais puro
+
+O amor mais seguro do mundo
+C7M
+    O toque mais puro
+
+O amor mais seguro do mundo
+     F7M
+É o Teu
+
+O toque mais puro
+
+O amor mais seguro do mundo
+C7M
+    O toque mais puro
+
+O amor mais seguro do mundo
+           F7M
+É o Teu Jesus
