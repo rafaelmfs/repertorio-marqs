@@ -30,7 +30,7 @@ function hasMarkdownSyntax(content: string): boolean {
 export function SongMarkdownContent({ content }: SongMarkdownContentProps) {
   if (!hasMarkdownSyntax(content)) {
     return (
-      <pre className="whitespace-pre pb-4 font-mono text-sm leading-7 text-slate-800">
+      <pre className="whitespace-pre-wrap break-words pb-4 font-mono text-sm leading-7 text-slate-800">
         {content}
       </pre>
     );

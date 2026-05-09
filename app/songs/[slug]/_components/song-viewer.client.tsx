@@ -48,7 +48,7 @@ export function SongViewer({ content }: SongViewerProps) {
     <div>
       <div
         ref={songContainerRef}
-        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto overflow-x-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8"
+        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto overflow-x-hidden rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8"
       >
         <div className="pb-40 sm:pb-44 text-sm">
           <SongMarkdownContent content={content} />
