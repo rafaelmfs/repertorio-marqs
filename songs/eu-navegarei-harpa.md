@@ -1,5 +1,5 @@
 ---
-slug: eu-navegarei
+slug: eu-navegarei-harpa
 title: Eu Navegarei
 artist: Harpa Cristã
 ---
