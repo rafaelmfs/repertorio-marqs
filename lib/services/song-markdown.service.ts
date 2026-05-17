@@ -1,3 +1,4 @@
+import { breakCifraLines } from "../utils/cifra-line-break";
 type SongMarkdownInput = {
   title: string;
   artist?: string;
@@ -51,7 +52,8 @@ export function buildSongMarkdown({
   const normalizedTitle = title.trim();
   const normalizedArtist = artist?.trim() ?? "";
   const normalizedSlug = (slug?.trim() || createSongSlug(normalizedTitle)).trim();
-  const normalizedContent = convertHtmlToMarkdown(content).trim();
+  let normalizedContent = convertHtmlToMarkdown(content).trim();
+  normalizedContent = breakCifraLines(normalizedContent, 48);
 
   const frontmatterLines = [
     "---",

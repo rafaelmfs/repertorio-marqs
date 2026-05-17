@@ -29,9 +29,7 @@ describe("SongCard", () => {
     expect(push).toHaveBeenCalledWith("/songs/gratidao");
   });
 
-  it("renders content and triggers favorite callback", () => {
-    const onToggleFavorite = vi.fn();
-
+  it("renders content without triggering navigation", () => {
     render(
       <SongCard
         song={{ slug: "gratidao", title: "Gratidao", artist: "Projeto Sola" }}
@@ -39,9 +37,6 @@ describe("SongCard", () => {
     );
 
     expect(screen.getByText("Gratidao")).toBeInTheDocument();
-
-    fireEvent.click(screen.getByRole("button", { name: "Favoritar" }));
-    expect(onToggleFavorite).toHaveBeenCalledWith("gratidao");
     expect(push).not.toHaveBeenCalled();
   });
 

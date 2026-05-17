@@ -1,0 +1,252 @@
+
+> repertorio-marqs@0.1.0 test
+> vitest run --coverage
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.6 [39m[90mC:/Users/Rafael/Documents/GitHub/repertorio-marqs[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [31m❯[39m lib/services/auto-scroll.service.test.ts [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 46[2mms[22m[39m
+[31m     [31m×[31m clamps values to allowed range[39m[32m 37[2mms[22m[39m
+     [32m✓[39m uses default value when speed is invalid[32m 1[2mms[22m[39m
+     [32m✓[39m converts px per second to frame delta[32m 1[2mms[22m[39m
+ [31m❯[39m lib/data/songs-filesystem.data.test.ts [2m([22m[2m0 test[22m[2m)[22m
+(node:8236) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [31m❯[39m lib/hooks/use-setlists.test.tsx [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 26[2mms[22m[39m
+[31m     [31m×[31m creates setlist and manages songs[39m[32m 15[2mms[22m[39m
+(node:10892) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [31m❯[39m lib/hooks/use-favorites.test.tsx [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 33[2mms[22m[39m
+[31m     [31m×[31m toggles favorite slugs[39m[32m 17[2mms[22m[39m
+ [31m❯[39m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx [2m([22m[2m2 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 221[2mms[22m[39m
+[31m     [31m×[31m renders sticky centered toggle with visible state classes[39m[32m 193[2mms[22m[39m
+[31m     [31m×[31m applies collapsed top class when nav is hidden[39m[32m 15[2mms[22m[39m
+ [32m✓[39m components/lists/setlist-card.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1227[2mms[22m[39m
+     [33m[2m✓[22m[39m navigates when clicking a song row [33m 872[2mms[22m[39m
+     [33m[2m✓[22m[39m triggers callbacks for song operations [33m 343[2mms[22m[39m
+ [31m❯[39m components/songs/song-card.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1366[2mms[22m[39m
+     [33m[2m✓[22m[39m navigates when clicking the card body [33m 808[2mms[22m[39m
+[31m     [31m×[31m renders content and triggers favorite callback[39m[33m 307[2mms[22m[39m
+     [32m✓[39m allows choosing target list before adding without redirect[32m 222[2mms[22m[39m
+ [32m✓[39m lib/services/setlist.service.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m lib/hooks/use-auto-scroll.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 93[2mms[22m[39m
+ [32m✓[39m app/_components/songs-page.client.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 919[2mms[22m[39m
+     [33m[2m✓[22m[39m clears search input when clear button is clicked [33m 888[2mms[22m[39m
+ [32m✓[39m app/lists/_components/lists-page.client.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1034[2mms[22m[39m
+     [33m[2m✓[22m[39m clears search input when clear button is clicked [33m 938[2mms[22m[39m
+ [32m✓[39m lib/services/song-search.service.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m lib/utils/string.utils.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m lib/services/song-markdown.service.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Suites 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m lib/data/songs-filesystem.data.test.ts[2m [ lib/data/songs-filesystem.data.test.ts ][22m
+[31m[1mError[22m: Failed to resolve import "server-only" from "lib/data/songs-filesystem.data.ts". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Rafael/Documents/GitHub/repertorio-marqs/lib/data/songs-filesystem.data.ts[39m:1:7
+[33m  1  |  import "server-only";
+     |          ^
+  2  |  import matter from "gray-matter";
+  3  |  import { promises as fs } from "node:fs";[39m
+[90m [2m❯[22m TransformPluginContext._formatLog node_modules/vite/dist/node/chunks/node.js:[2m30354:39[22m[39m
+[90m [2m❯[22m TransformPluginContext.error node_modules/vite/dist/node/chunks/node.js:[2m30351:14[22m[39m
+[90m [2m❯[22m normalizeUrl node_modules/vite/dist/node/chunks/node.js:[2m27633:18[22m[39m
+[90m [2m❯[22m node_modules/vite/dist/node/chunks/node.js:[2m27696:30[22m[39m
+[90m [2m❯[22m TransformPluginContext.transform node_modules/vite/dist/node/chunks/node.js:[2m27664:4[22m[39m
+[90m [2m❯[22m EnvironmentPluginContainer.transform node_modules/vite/dist/node/chunks/node.js:[2m30143:14[22m[39m
+[90m [2m❯[22m loadAndTransform node_modules/vite/dist/node/chunks/node.js:[2m24468:26[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯[22m[39m
+
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 6 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m lib/hooks/use-favorites.test.tsx[2m > [22museFavorites[2m > [22mtoggles favorite slugs
+[31m[1mTypeError[22m: window.localStorage.clear is not a function[39m
+[36m [2m❯[22m lib/hooks/use-favorites.test.tsx:[2m7:25[22m[39m
+    [90m  5|[39m [34mdescribe[39m([32m"useFavorites"[39m[33m,[39m () [33m=>[39m {
+    [90m  6|[39m   [34mbeforeEach[39m(() [33m=>[39m {
+    [90m  7|[39m     window[33m.[39mlocalStorage[33m.[39m[34mclear[39m()[33m;[39m
+    [90m   |[39m                         [31m^[39m
+    [90m  8|[39m   })[33m;[39m
+    [90m  9|[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m lib/hooks/use-setlists.test.tsx[2m > [22museSetlists[2m > [22mcreates setlist and manages songs
+[31m[1mTypeError[22m: window.localStorage.clear is not a function[39m
+[36m [2m❯[22m lib/hooks/use-setlists.test.tsx:[2m7:25[22m[39m
+    [90m  5|[39m [34mdescribe[39m([32m"useSetlists"[39m[33m,[39m () [33m=>[39m {
+    [90m  6|[39m   [34mbeforeEach[39m(() [33m=>[39m {
+    [90m  7|[39m     window[33m.[39mlocalStorage[33m.[39m[34mclear[39m()[33m;[39m
+    [90m   |[39m                         [31m^[39m
+    [90m  8|[39m     vi[33m.[39m[34mspyOn[39m([33mDate[39m[33m,[39m [32m"now"[39m)[33m.[39m[34mmockReturnValue[39m([34m10[39m)[33m;[39m
+    [90m  9|[39m   })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m lib/services/auto-scroll.service.test.ts[2m > [22mauto-scroll service[2m > [22mclamps values to allowed range
+[31m[1mAssertionError[22m: expected 5 to be 1 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 1[39m
+[31m+ 5[39m
+
+[36m [2m❯[22m lib/services/auto-scroll.service.test.ts:[2m10:37[22m[39m
+    [90m  8|[39m [34mdescribe[39m([32m"auto-scroll service"[39m[33m,[39m () [33m=>[39m {
+    [90m  9|[39m   [34mit[39m([32m"clamps values to allowed range"[39m[33m,[39m () [33m=>[39m {
+    [90m 10|[39m     [34mexpect[39m([34mclampAutoScrollSpeed[39m([34m5[39m))[33m.[39m[34mtoBe[39m([33mAUTO_SCROLL_SPEED[39m[33m.[39mmin)[33m;[39m
+    [90m   |[39m                                     [31m^[39m
+    [90m 11|[39m     [34mexpect[39m([34mclampAutoScrollSpeed[39m([34m500[39m))[33m.[39m[34mtoBe[39m([33mAUTO_SCROLL_SPEED[39m[33m.[39mmax)[33m;[39m
+    [90m 12|[39m     [34mexpect[39m([34mclampAutoScrollSpeed[39m([34m90[39m))[33m.[39m[34mtoBe[39m([34m90[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m components/songs/song-card.test.tsx[2m > [22mSongCard[2m > [22mrenders content and triggers favorite callback
+[31m[1mTestingLibraryElementError[22m: Unable to find an accessible element with the role "button" and name "Favoritar"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Abrir musica Gratidao":
+  [36m<div[31m
+    [33maria-label[31m=[32m"Abrir musica Gratidao"[31m
+    [33mclass[31m=[32m"rounded-xl border border-slate-200 bg-white p-4 shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-all duration-200 ease-out hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)] space-y-3 cursor-pointer"[31m
+    [33mrole[31m=[32m"link"[31m
+    [33mtabindex[31m=[32m"0"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Gratidao":
+  [36m<h2[31m
+    [33mclass[31m=[32m"text-base font-semibold text-slate-900"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[31m
+    [33mclass[31m=[32m"text-sm text-slate-600"[31m
+  [36m/>[31m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33maria-label[31m=[32m"Abrir musica Gratidao"[31m
+      [33mclass[31m=[32m"rounded-xl border border-slate-200 bg-white p-4 shadow-[0_1px_2px_rgba(15,23,42,0.06)] transition-all duration-200 ease-out hover:shadow-[0_10px_30px_rgba(15,23,42,0.08)] space-y-3 cursor-pointer"[31m
+      [33mrole[31m=[32m"link"[31m
+      [33mtabindex[31m=[32m"0"[31m
+    [36m>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex items-start justify-between gap-3"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"space-y-1"[31m
+        [36m>[31m
+          [36m<h2[31m
+            [33mclass[31m=[32m"text-base font-semibold text-slate-900"[31m
+          [36m>[31m
+            [0mGratidao[0m
+          [36m</h2>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-slate-600"[31m
+          [36m>[31m
+            [0mProjeto Sola[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex flex-col gap-2"[31m
+      [36m/>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"flex items-center gap-2 text-xs text-slate-500"[31m
+      [36m>[31m
+        [36m<svg[31m
+          [33maria-hidden[31m=[32m"true"[31m
+          [33mclass[31m=[32m"h-3.5 w-3.5"[31m
+          [33mfill[31m=[32m"none"[31m
+          [33mstroke[31m=[32m"currentColor"[31m
+          [33mstroke-linecap[31m=[32m"round"[31m
+          [33mstroke-linejoin[31m=[32m"round"[31m
+          [33mstroke-width[31m=[32m"2"[31m
+          [33mviewBox[31m=[32m"0 0 24 24"[31m
+        [36m>[31m
+          [36m<path[31m
+            [33md[31m=[32m"M9 18a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"[31m
+          [36m/>[31m
+          [36m<path[31m
+            [33md[31m=[32m"M19 16a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"[31m
+          [36m/>[31m
+          [36m<path[31m
+            [33md[31m=[32m"M9 18V6l10-2v12"[31m
+          [36m/>[31m
+        [36m</svg>[31m
+        [36m<span>[31m
+          [0mArquivo local em Markdown[0m
+        [36m</span>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+[90m [2m❯[22m Object.getElementError node_modules/@testing-library/dom/dist/config.js:[2m37:19[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2m❯[22m components/songs/song-card.test.tsx:[2m43:28[22m[39m
+    [90m 41|[39m     [34mexpect[39m(screen[33m.[39m[34mgetByText[39m([32m"Gratidao"[39m))[33m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 42|[39m
+    [90m 43|[39m     fireEvent[33m.[39m[34mclick[39m(screen[33m.[39m[34mgetByRole[39m([32m"button"[39m[33m,[39m { name[33m:[39m [32m"Favoritar"[39m }))[33m;[39m
+    [90m   |[39m                            [31m^[39m
+    [90m 44|[39m     [34mexpect[39m(onToggleFavorite)[33m.[39m[34mtoHaveBeenCalledWith[39m([32m"gratidao"[39m)[33m;[39m
+    [90m 45|[39m     [34mexpect[39m(push)[33m.[39mnot[33m.[39m[34mtoHaveBeenCalled[39m()[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx[2m > [22mMobileTopNav[2m > [22mrenders sticky centered toggle with visible state classes
+[31m[1mError[22m: [2mexpect([22m[31mreceived[31m[2m).toBeInTheDocument()[22m
+
+[31mreceived[31m value must be an HTMLElement or an SVGElement.
+Received has type:  Null
+Received has value: [31mnull[31m[39m
+[36m [2m❯[22m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx:[2m23:29[22m[39m
+    [90m 21|[39m
+    [90m 22|[39m     [35mconst[39m stickyContainer [33m=[39m container[33m.[39m[34mquerySelector[39m([32m".sticky"[39m)[33m;[39m
+    [90m 23|[39m     [34mexpect[39m(stickyContainer)[33m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m   |[39m                             [31m^[39m
+    [90m 24|[39m     [34mexpect[39m(stickyContainer)[33m.[39m[34mtoHaveClass[39m([32m"left-1/2"[39m)[33m;[39m
+    [90m 25|[39m     [34mexpect[39m(stickyContainer)[33m.[39m[34mtoHaveClass[39m([32m"-translate-x-1/2"[39m)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx[2m > [22mMobileTopNav[2m > [22mapplies collapsed top class when nav is hidden
+[31m[1mError[22m: [2mexpect([22m[31mreceived[31m[2m).toHaveClass()[22m
+
+[31mreceived[31m value must be an HTMLElement or an SVGElement.
+Received has type:  Null
+Received has value: [31mnull[31m[39m
+[36m [2m❯[22m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx:[2m39:29[22m[39m
+    [90m 37|[39m
+    [90m 38|[39m     [35mconst[39m stickyContainer [33m=[39m container[33m.[39m[34mquerySelector[39m([32m".sticky"[39m)[33m;[39m
+    [90m 39|[39m     [34mexpect[39m(stickyContainer)[33m.[39m[34mtoHaveClass[39m([32m"top-0"[39m)[33m;[39m
+    [90m   |[39m                             [31m^[39m
+    [90m 40|[39m     expect(screen.getByRole("button", { name: "Exibir barra de navegac…
+    [90m 41|[39m   })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m29 passed[39m[22m[90m (35)[39m
+[2m   Start at [22m 12:11:35
+[2m   Duration [22m 13.14s[2m (transform 2.20s, setup 6.45s, import 8.09s, tests 5.04s, environment 51.28s)[22m
+

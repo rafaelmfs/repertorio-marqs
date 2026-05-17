@@ -30,9 +30,19 @@ function hasMarkdownSyntax(content: string): boolean {
 export function SongMarkdownContent({ content }: SongMarkdownContentProps) {
   if (!hasMarkdownSyntax(content)) {
     return (
-      <pre className="whitespace-pre-wrap break-words pb-4 font-mono text-sm leading-7 text-slate-800">
-        {content}
-      </pre>
+      <div style={{ width: '100%', overflowX: 'visible' }}>
+        <pre
+          className="whitespace-pre pb-4 font-mono leading-7 text-slate-800"
+          style={{
+            fontSize: 'clamp(10px, 3vw, 1rem)',
+            display: 'block',
+            width: '100%',
+            margin: 0,
+          }}
+        >
+          {content}
+        </pre>
+      </div>
     );
   }
 

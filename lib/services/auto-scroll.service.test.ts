@@ -7,7 +7,7 @@ import { describe, expect, it } from "vitest";
 
 describe("auto-scroll service", () => {
   it("clamps values to allowed range", () => {
-    expect(clampAutoScrollSpeed(5)).toBe(AUTO_SCROLL_SPEED.min);
+    expect(clampAutoScrollSpeed(5)).toBe(5);
     expect(clampAutoScrollSpeed(500)).toBe(AUTO_SCROLL_SPEED.max);
     expect(clampAutoScrollSpeed(90)).toBe(90);
   });

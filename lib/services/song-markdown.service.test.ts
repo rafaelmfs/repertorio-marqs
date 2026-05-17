@@ -57,4 +57,19 @@ describe("song markdown service", () => {
     expect(output).toContain("Texto forte");
     expect(output).not.toContain("**forte**");
   });
+
+  it("breaks long chord lines when building markdown", () => {
+    const longChordLine = `${"A ".repeat(28).trim()}\n${"la ".repeat(28).trim()}`;
+
+    const output = buildSongMarkdown({
+      title: "Linha Longa",
+      content: longChordLine,
+    });
+
+    const markdownContent = output.split("\n\n")[1] ?? "";
+    const lines = markdownContent.trim().split("\n");
+
+    expect(lines.length).toBeGreaterThan(2);
+    expect(lines.every((line) => line.length <= 48)).toBe(true);
+  });
 });

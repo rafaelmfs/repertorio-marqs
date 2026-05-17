@@ -1,0 +1,42 @@
+﻿
+> repertorio-marqs@0.1.0 test
+> vitest run --coverage
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.6 [39m[90mC:/Users/Rafael/Documents/GitHub/repertorio-marqs[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [31mÔØ»[39m lib/services/auto-scroll.service.test.ts [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 36[2mms[22m[39m
+[31m     [31m├ù[31m clamps values to allowed range[39m[32m 30[2mms[22m[39m
+     [32mÔ£ô[39m uses default value when speed is invalid[32m 1[2mms[22m[39m
+     [32mÔ£ô[39m converts px per second to frame delta[32m 0[2mms[22m[39m
+ [31mÔØ»[39m lib/data/songs-filesystem.data.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mÔØ»[39m lib/hooks/use-favorites.test.tsx [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 52[2mms[22m[39m
+[31m     [31m├ù[31m toggles favorite slugs[39m[32m 26[2mms[22m[39m
+ [31mÔØ»[39m lib/hooks/use-setlists.test.tsx [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 35[2mms[22m[39m
+[31m     [31m├ù[31m creates setlist and manages songs[39m[32m 16[2mms[22m[39m
+ [31mÔØ»[39m app/songs/[slug]/_components/mobile-top-nav.client.test.tsx [2m([22m[2m2 tests[22m[2m | [22m[31m2 failed[39m[2m)[22m[32m 290[2mms[22m[39m
+[31m     [31m├ù[31m renders sticky centered toggle with visible state classes[39m[32m 246[2mms[22m[39m
+[31m     [31m├ù[31m applies collapsed top class when nav is hidden[39m[32m 26[2mms[22m[39m
+ [32mÔ£ô[39m components/lists/setlist-card.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1229[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m navigates when clicking a song row [33m 914[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m triggers callbacks for song operations [32m 300[2mms[22m[39m
+ [31mÔØ»[39m components/songs/song-card.test.tsx [2m([22m[2m3 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1303[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m navigates when clicking the card body [33m 854[2mms[22m[39m
+[31m     [31m├ù[31m renders content and triggers favorite callback[39m[32m 281[2mms[22m[39m
+     [32mÔ£ô[39m allows choosing target list before adding without redirect[32m 156[2mms[22m[39m
+ [32mÔ£ô[39m lib/services/setlist.service.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32mÔ£ô[39m lib/services/song-search.service.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32mÔ£ô[39m app/_components/songs-page.client.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1051[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m clears search input when clear button is clicked [33m 999[2mms[22m[39m
+ [32mÔ£ô[39m lib/hooks/use-auto-scroll.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 71[2mms[22m[39m
+ [32mÔ£ô[39m app/lists/_components/lists-page.client.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1290[2mms[22m[39m
+     [33m[2mÔ£ô[22m[39m clears search input when clear button is clicked [33m 1206[2mms[22m[39m
+ [32mÔ£ô[39m lib/services/song-markdown.service.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mÔ£ô[39m lib/utils/string.utils.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+
+[2m Test Files [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[31m6 failed[39m[22m[2m | [22m[1m[32m29 passed[39m[22m[90m (35)[39m
+[2m   Start at [22m 12:07:56
+[2m   Duration [22m 13.85s[2m (transform 2.14s, setup 5.69s, import 8.65s, tests 5.44s, environment 53.05s)[22m
+

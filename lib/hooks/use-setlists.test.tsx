@@ -1,11 +1,14 @@
 import { useSetlists } from "@/lib/hooks/use-setlists";
 import { act, renderHook } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("useSetlists", () => {
   beforeEach(() => {
-    window.localStorage.clear();
     vi.spyOn(Date, "now").mockReturnValue(10);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
   });
 
   it("creates setlist and manages songs", () => {

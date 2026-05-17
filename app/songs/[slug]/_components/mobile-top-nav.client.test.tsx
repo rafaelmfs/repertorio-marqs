@@ -19,7 +19,7 @@ describe("MobileTopNav", () => {
 
     const { container } = render(<MobileTopNav />);
 
-    const stickyContainer = container.querySelector(".sticky");
+    const stickyContainer = container.querySelector(".absolute");
     expect(stickyContainer).toBeInTheDocument();
     expect(stickyContainer).toHaveClass("left-1/2");
     expect(stickyContainer).toHaveClass("-translate-x-1/2");
@@ -35,7 +35,7 @@ describe("MobileTopNav", () => {
 
     const { container } = render(<MobileTopNav />);
 
-    const stickyContainer = container.querySelector(".sticky");
+    const stickyContainer = container.querySelector(".absolute");
     expect(stickyContainer).toHaveClass("top-0");
     expect(screen.getByRole("button", { name: "Exibir barra de navegacao" })).toBeInTheDocument();
   });

@@ -19,8 +19,11 @@ Estão tentando sepultar minha alegria
                                G    D9/F#  Em
 Tentando ver meus sonhos cancelados
 
-          Em/D#     Em/D               C#m7(5-)  G
-Lázaro ouviu a Sua voz, quando aquela pedra removeu
+          Em/D#     Em/D               
+Lázaro ouviu a Sua voz, 
+
+                C#m7(5-)  G
+quando aquela pedra removeu
                            D      D/C#  Bm                    
 Depois de quatro dias ele reviveu
                Bm/A                 G
@@ -65,8 +68,11 @@ Estão tentando sepultar minha alegria
                                G    D9/F#  Em
 Tentando ver meus sonhos cancelados
 
-          Em/D#     Em/D               C#m7(5-)  G
-Lázaro ouviu a Sua voz, quando aquela pedra removeu
+          Em/D#     Em/D               
+Lázaro ouviu a Sua voz, 
+
+               C#m7(5-)  G
+quando aquela pedra removeu
                            D      D/C#  Bm                    
 Depois de quatro dias ele reviveu
                Bm/A                  G
