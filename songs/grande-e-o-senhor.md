@@ -4,113 +4,113 @@ title: Grande É o Senhor
 artist: Eli Soares
 ---
 
-[Intro] F  Em7  Dm7  C/E  
-        F  Em7  Dm7  
+[Intro] C  Bm7  Am7  G/B  
+        C  Bm7  Am7  
 
 [Solo]
 
 [Primeira Parte]
 
-  C            F/C
+  G            C/G
 Grande é o Senhor
-                   C
+                   G
 E mui digno de louvor
-      F/C
+      C/G
 Na cidade do nosso Deus
-     G/B   Am7
+     D/F#  Em7
 Seu Santo monte
-G/B  C               Dm7  Em7  F7M  G4
+D/F# G               Am7  Bm7  C7M  D4
      Alegria de toda ter - ra - a - a
 
 [Segunda Parte]
 
- C            F/C
+ G            C/G
 Grande é o Senhor
-                       C
+                       G
 Em quem nós temos a vitória
-       F/C
+       C/G
 E que nos ajuda
-             Am
+             Em
 Contra o inimigo
-G/B     C9
+D/F#    G9
     Por isso diante
-              Dm7  Em7  F7M  G4
+              Am7  Bm7  C7M  D4
 Dele nos prostramos
 
 [Refrão]
 
-    C
+    G
 Queremos o Teu
-             C7M
+             G7M
 Nome engrandecer
-F7M
+C7M
 E agradecer-Te
-C/E       Dm7             G
+G/B       Am7             D
 Por Tua obra em nossas vidas
 
-     C
+     G
 Confiamos em Teu
-           C7M
+           G7M
 Infinito amor
-      F7M                C/E
+      C7M                G/B
 Pois só Tu és o Deus eterno
-Dm7        G4
+Am7        D4
 Sobre toda terra e céus
 
 [Interlúdio]
 
-( F  C/E  Dm7  C/E )
-( F  Em7  Dm7 )
+( C  G/B  Am7  G/B )
+( C  Bm7  Am7 )
 
 [Segunda Parte]
 
- C             F/C
+ G             C/G
 Grande é o Senhor
-                       C
+                       G
 Em quem nós temos a vitória
-       F/C
+       C/G
 E que nos ajuda
-        G/B  Am7
+        D/F# Em7
 Contra o inimigo
-G/B     C9
+D/F#    G9
     Por isso diante
-           Dm7  Em7  F7M  G4(7/9)
+           Am7  Bm7  C7M  D4(7/9)
 Dele nos prostramos
 
 [Refrão]
 
-    C
+    G
 Queremos o Teu
-            C7M
+            G7M
 Nome engrandecer
-F7M
+C7M
 E agradecer-Te
-C/E         Dm7             G4
+G/B         Am7             D4
     Por Tua obra em nossas vidas
 
-     C
+     G
 Confiamos em Teu
-           C7M
+           G7M
 Infinito amor
-      F7M                 C/E      
+      C7M                 G/B      
 Pois só Tu és o Deus eterno
- Dm7        G4
+ Am7        D4
 Sobre toda terra
 
-    C
+    G
 Queremos o Teu
-             C7M
+             G7M
 Nome engrandecer
-F2             A7(4/9)
+C2             E7(4/9)
 E agradecer-Te
-         Dm7             G/B
+         Am7             D/F#
 Por Tua obra em nossas vidas
 
-     C
+     G
 Confiamos em Teu
-           C7M
+           G7M
 Infinito amor
-      F7M                  C/E
+      C7M                  G/B
 Pois só Tu és o Deus eterno
- Dm7        G4      C9
+ Am7        D4      G9
 Sobre toda terra e céus
