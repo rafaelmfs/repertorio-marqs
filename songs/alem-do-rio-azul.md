@@ -14,7 +14,7 @@ artist: Voz da verdade
 Além do rio azul
     F          G              C
 As ruas são de ouro e de cristais
-  F         G      C  G/B    Am
+  F         G      C  E     Am
 Ali tudo é vida, ali tudo é paz
  G        F    G        C   Am
 Morte e choro,   nunca mais
@@ -25,7 +25,7 @@ Tristeza e dor,   nunca mais
 Além do rio azul
     F          G              C
 As ruas são de ouro e de cristais
-  F         G      C  G/B    Am
+  F         G      C  E      Am
 Ali tudo é vida, ali tudo é paz
  G        F    G        C   Am
 Morte e choro,   nunca mais
@@ -45,16 +45,16 @@ Verei a face do meu Mestre querido
 
 Am          Dm             G
    Não haverá mais noite ali
-         C  G/B            Am
+         C  E             Am
 Não haverá      nenhum clamor
          Dm          G
 Verei os olhos de Jesus
-       C                E
+       E                Am
 E tocarei Seu corpo, enfim
 
          Dm             G
 Não haverá mais noite ali
-         C  G/B            Am
+         C  E              Am
 Não haverá      nenhum clamor
          Dm          G
 Verei os olhos de Jesus
@@ -93,3 +93,14 @@ Nunca mais, nunca mais
 Morte e choro, tristeza e dor
        G                  C
 Nunca mais, além do rio azul
+
+
+
+Am          Dm             G
+   Não haverá mais noite ali
+         C  E             Am
+Não haverá      nenhum clamor
+         Dm          G
+Verei os olhos de Jesus
+       E                Am
+E tocarei Seu corpo, enfim
