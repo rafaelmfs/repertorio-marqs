@@ -15,7 +15,7 @@ export function ToastStack({ toasts, onDismiss }: ToastStackProps) {
   }
 
   return (
-    <div className="pointer-events-none fixed right-4 top-4 z-50 flex w-[min(92vw,360px)] flex-col gap-2">
+    <div className="pointer-events-none fixed right-4 top-4 z-50 flex w-[92vw] max-w-[360px] flex-col gap-2">
       {toasts.map((toast) => (
         <div
           key={toast.id}
