@@ -9,7 +9,11 @@ const THEME_EVENT = "repertorio:theme-change";
 
 function subscribe(onStoreChange: () => void) {
   window.addEventListener(THEME_EVENT, onStoreChange);
-  return () => window.removeEventListener(THEME_EVENT, onStoreChange);
+  window.addEventListener("storage", onStoreChange);
+  return () => {
+    window.removeEventListener(THEME_EVENT, onStoreChange);
+    window.removeEventListener("storage", onStoreChange);
+  };
 }
 
 function getSnapshot() {
@@ -25,8 +29,16 @@ export function ThemeToggle() {
 
   function toggleTheme() {
     const nextIsDark = !document.documentElement.classList.contains("dark");
+    const theme = nextIsDark ? "dark" : "light";
     document.documentElement.classList.toggle("dark", nextIsDark);
-    window.localStorage.setItem(THEME_STORAGE_KEY, nextIsDark ? "dark" : "light");
+
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      // Old WebKit can reject localStorage, especially in private browsing.
+    }
+
+    document.cookie = `repertorio_theme=${theme}; path=/; max-age=31536000; SameSite=Lax`;
     window.dispatchEvent(new Event(THEME_EVENT));
   }
 

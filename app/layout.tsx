@@ -24,12 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="h-full antialiased">
+    <html lang="pt-BR" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "window.globalThis||(window.globalThis=window);try{var t=localStorage.getItem('repertorio:theme');var d=t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}",
+              "window.globalThis||(window.globalThis=window);var t=null;try{t=localStorage.getItem('repertorio:theme')}catch(e){}if(!t){var m=document.cookie.match(/(?:^|; )repertorio_theme=([^;]*)/);t=m?decodeURIComponent(m[1]):null}var d=t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d);",
           }}
         />
       </head>

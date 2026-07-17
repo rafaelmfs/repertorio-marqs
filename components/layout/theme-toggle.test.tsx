@@ -6,6 +6,7 @@ describe("ThemeToggle", () => {
   afterEach(() => {
     document.documentElement.classList.remove("dark");
     window.localStorage.removeItem("repertorio:theme");
+    document.cookie = "repertorio_theme=; path=/; max-age=0";
   });
 
   it("ativa e persiste o tema escuro", () => {
@@ -15,6 +16,7 @@ describe("ThemeToggle", () => {
 
     expect(document.documentElement).toHaveClass("dark");
     expect(window.localStorage.getItem("repertorio:theme")).toBe("dark");
+    expect(document.cookie).toContain("repertorio_theme=dark");
     expect(screen.getByRole("button", { name: "Ativar tema claro" })).toBeInTheDocument();
   });
 
@@ -26,5 +28,6 @@ describe("ThemeToggle", () => {
 
     expect(document.documentElement).not.toHaveClass("dark");
     expect(window.localStorage.getItem("repertorio:theme")).toBe("light");
+    expect(document.cookie).toContain("repertorio_theme=light");
   });
 });
