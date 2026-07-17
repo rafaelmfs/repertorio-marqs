@@ -42,7 +42,7 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
         </p>
       </div>
 
-      <div className="space-y-2 sm:space-y-3 rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
+      <div className="space-y-2 sm:space-y-3 rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-[#44474c] dark:bg-[#191c20]">
         <label htmlFor="song-search" className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200">
           Buscar por titulo ou artista
         </label>

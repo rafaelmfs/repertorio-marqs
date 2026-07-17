@@ -82,10 +82,10 @@ export function SongMarkdownComposer() {
 
       {isOpen && isMounted
         ? createPortal(
-          <div className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm dark:bg-[#020817]/75">
+          <div className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm dark:bg-[#090a0c]/85">
             <div className="song-scrollbar h-full overflow-y-auto p-3 sm:p-4 md:p-6">
-              <div className="mx-auto w-full max-w-3xl rounded-lg sm:rounded-2xl border border-slate-200 bg-white shadow-xl dark:border-slate-700 dark:bg-[#0f1f36]">
-                <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-5 sm:py-4 dark:border-slate-700">
+              <div className="mx-auto w-full max-w-3xl rounded-lg sm:rounded-2xl border border-slate-200 bg-white shadow-xl dark:border-[#44474c] dark:bg-[#191c20]">
+                <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-5 sm:py-4 dark:border-[#44474c]">
                   <div>
                     <h2 className="flex items-center gap-2 text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100">
                       <IconFileText className="h-4 w-4" />
@@ -163,13 +163,13 @@ export function SongMarkdownComposer() {
                     </Button>
                   </div>
 
-                  <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-slate-50 p-2 sm:p-4 text-xs leading-5 sm:leading-6 text-slate-800 dark:border-slate-700 dark:bg-[#0b1a2f] dark:text-slate-200">
+                  <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-slate-50 p-2 sm:p-4 text-xs leading-5 sm:leading-6 text-slate-800 dark:border-[#44474c] dark:bg-[#15181c] dark:text-slate-200">
                     {markdown}
                   </pre>
 
                   <div className="space-y-1.5 sm:space-y-2 pt-1">
                     <p className="text-xs font-medium text-slate-600 dark:text-slate-300">Preview limpo da cifra</p>
-                    <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-white p-2 sm:p-4 text-xs sm:text-sm leading-5 sm:leading-7 text-slate-800 dark:border-slate-700 dark:bg-[#0b1a2f] dark:text-slate-200">
+                    <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-white p-2 sm:p-4 text-xs sm:text-sm leading-5 sm:leading-7 text-slate-800 dark:border-[#44474c] dark:bg-[#15181c] dark:text-slate-200">
                       {contentPreview}
                     </pre>
                   </div>

@@ -10,9 +10,9 @@
 }
 
 .dark {
-  --background: #081426;
+  --background: #111315;
   --foreground: #e7eef8;
-  --surface: #0f1f36;
+  --surface: #191c20;
   color-scheme: dark;
 }
 
@@ -23,8 +23,8 @@ body {
 
 .dark body {
   background-image:
-    radial-gradient(circle at 100% 0%, #163a66 0%, transparent 34%),
-    radial-gradient(circle at 0% 100%, #102a4c 0%, transparent 42%);
+    radial-gradient(circle at 100% 0%, #252a31 0%, transparent 34%),
+    radial-gradient(circle at 0% 100%, #1d2127 0%, transparent 42%);
 }
 
 html {

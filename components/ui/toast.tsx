@@ -20,7 +20,7 @@ export function ToastStack({ toasts, onDismiss }: ToastStackProps) {
         <div
           key={toast.id}
           className={cn(
-            "pointer-events-auto flex items-center justify-between gap-3 rounded-xl border border-emerald-200 bg-emerald-50/95 px-3 py-2 text-sm text-emerald-800 shadow-lg backdrop-blur dark:border-emerald-800 dark:bg-[#102d36]/95 dark:text-emerald-200",
+            "pointer-events-auto flex items-center justify-between gap-3 rounded-xl border border-emerald-200 bg-emerald-50/95 px-3 py-2 text-sm text-emerald-800 shadow-lg backdrop-blur dark:border-[#426056] dark:bg-[#182522]/95 dark:text-emerald-200",
             "animate-[toastIn_220ms_ease-out]",
           )}
           role="status"

@@ -1,5 +1,6 @@
 import { SongViewer } from "@/app/songs/[slug]/_components/song-viewer.client";
 import { BackButton } from "@/components/back-button";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Card } from "@/components/ui/card";
 import { getSongDetailViewModel } from "@/lib/viewmodels/songs.view-model";
 import { notFound } from "next/navigation";
@@ -21,11 +22,14 @@ export default async function SongPage({ params }: SongPageProps) {
     <>
       <main className="mx-auto w-full max-w-5xl px-4 py-8">
         <div className="mb-4 flex items-center justify-between gap-2">
-          <div>
+          <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{song.title}</h1>
             <p className="text-sm text-slate-600 dark:text-slate-300">{song.artist ?? "Artista nao informado"}</p>
           </div>
-          <BackButton />
+          <div className="flex shrink-0 items-center gap-2">
+            <ThemeToggle />
+            <BackButton />
+          </div>
         </div>
 
         <Card className="p-0">

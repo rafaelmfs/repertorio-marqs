@@ -71,7 +71,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
         </p>
       </div>
 
-      <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
+      <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-[#44474c] dark:bg-[#191c20]">
         <div className="flex flex-col gap-2 sm:flex-row">
           <Input
             placeholder="Nome da lista"
@@ -86,7 +86,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
       </div>
 
       <div className="flex flex-col gap-3 sm:gap-4">
-        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-[#44474c] dark:bg-[#191c20]">
           <div className="mb-3 sm:mb-4 flex flex-col md:flex-row md:items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
               <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">Listas criadas</h2>
@@ -110,7 +110,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
           </div>
         </div>
 
-        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-[#44474c] dark:bg-[#191c20]">
           <div className="mb-3 sm:mb-4 flex flex-col md:flex-row items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
               <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">Musicas</h2>

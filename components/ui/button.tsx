@@ -16,11 +16,11 @@ const baseClassName =
 
 const variantClassName: Record<ButtonVariant, string> = {
   solid:
-    "bg-slate-900 text-white hover:bg-slate-700 focus-visible:ring-slate-500 ring-offset-white dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus-visible:ring-blue-400 dark:ring-offset-[#0f1f36]",
+    "bg-slate-900 text-white hover:bg-slate-700 focus-visible:ring-slate-500 ring-offset-white dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus-visible:ring-blue-400 dark:ring-offset-[#191c20]",
   outline:
-    "border border-slate-200 bg-white text-slate-900 hover:bg-slate-50 focus-visible:ring-slate-400 ring-offset-white dark:border-slate-600 dark:bg-[#12243d] dark:text-slate-100 dark:hover:bg-[#19304f] dark:focus-visible:ring-blue-400 dark:ring-offset-[#0f1f36]",
+    "border border-slate-200 bg-white text-slate-900 hover:bg-slate-50 focus-visible:ring-slate-400 ring-offset-white dark:border-[#4a4d52] dark:bg-[#20242a] dark:text-slate-100 dark:hover:bg-[#292e35] dark:focus-visible:ring-blue-400 dark:ring-offset-[#191c20]",
   ghost:
-    "text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-400 ring-offset-white dark:text-slate-200 dark:hover:bg-slate-700/60 dark:focus-visible:ring-blue-400 dark:ring-offset-[#0f1f36]",
+    "text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-400 ring-offset-white dark:text-slate-200 dark:hover:bg-slate-700/60 dark:focus-visible:ring-blue-400 dark:ring-offset-[#191c20]",
 };
 
 const sizeClassName: Record<ButtonSize, string> = {
