@@ -19,10 +19,10 @@ export function MobileTopNav() {
 
       <div
         className={[
-          "absolute z-30 rounded-b-lg flex w-16 left-1/2 -translate-x-1/2 justify-center md:hidden border border-slate-200/90",
+          "absolute z-30 rounded-b-lg flex w-16 left-1/2 -translate-x-1/2 justify-center md:hidden border border-slate-200/90 dark:border-slate-700/90",
           isVisibleOnMobile
-            ? "top-16  bg-white/80 backdrop-blur"
-            : "top-0 bg-white/80 backdrop-blur",
+            ? "top-16 bg-white/80 backdrop-blur dark:bg-[#0b1a2f]/90"
+            : "top-0 bg-white/80 backdrop-blur dark:bg-[#0b1a2f]/90",
         ].join(" ")}
       >
         <Button

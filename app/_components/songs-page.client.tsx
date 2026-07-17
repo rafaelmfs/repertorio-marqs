@@ -34,16 +34,16 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
   return (
     <section className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
           Repertorio de Cifras
         </h1>
-        <p className="text-xs sm:text-sm text-slate-600">
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
           Organize seu repertorio local com busca rapida, favoritos e listas.
         </p>
       </div>
 
-      <div className="space-y-2 sm:space-y-3 rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
-        <label htmlFor="song-search" className="text-xs sm:text-sm font-medium text-slate-700">
+      <div className="space-y-2 sm:space-y-3 rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
+        <label htmlFor="song-search" className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200">
           Buscar por titulo ou artista
         </label>
         <div className="relative">
@@ -57,7 +57,7 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
           {query && (
             <button
               type="button"
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:hover:text-slate-100"
               onClick={() => setQuery("")}
               aria-label="Limpar busca"
               title="Limpar busca"

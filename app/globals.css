@@ -6,11 +6,25 @@
   --background: #f6f7f9;
   --foreground: #0f172a;
   --surface: #ffffff;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #081426;
+  --foreground: #e7eef8;
+  --surface: #0f1f36;
+  color-scheme: dark;
 }
 
 html,
 body {
   min-height: 100%;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at 100% 0%, #163a66 0%, transparent 34%),
+    radial-gradient(circle at 0% 100%, #102a4c 0%, transparent 42%);
 }
 
 html {
@@ -132,4 +146,14 @@ summary,
 
 .song-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 116, 139, 0.42);
+}
+
+.dark html,
+.dark .song-scrollbar {
+  scrollbar-color: rgba(148, 163, 184, 0.4) transparent;
+}
+
+.dark html::-webkit-scrollbar-thumb,
+.dark .song-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.36);
 }

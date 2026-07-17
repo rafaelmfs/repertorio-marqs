@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,11 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="h-full antialiased">
-      <body className="text-slate-900">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.globalThis||(window.globalThis=window);try{var t=localStorage.getItem('repertorio:theme');var d=t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}",
+          }}
+        />
+      </head>
+      <body className="text-slate-900 dark:text-slate-100">
         {children}
-        <Script id="legacy-global-this" strategy="beforeInteractive">
-          {"window.globalThis||(window.globalThis=window);"}
-        </Script>
       </body>
     </html>
   );

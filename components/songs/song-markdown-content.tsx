@@ -32,7 +32,7 @@ export function SongMarkdownContent({ content }: SongMarkdownContentProps) {
     return (
       <div style={{ width: '100%', overflowX: 'visible' }}>
         <pre
-          className="whitespace-pre pb-4 font-mono leading-7 text-slate-800"
+          className="whitespace-pre pb-4 font-mono leading-7 text-slate-800 dark:text-slate-200"
           style={{
             fontSize: 'clamp(10px, 3vw, 1rem)',
             display: 'block',
@@ -50,12 +50,12 @@ export function SongMarkdownContent({ content }: SongMarkdownContentProps) {
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkBreaks]}
       components={{
-        h1: ({ ...props }) => <h1 className="mb-4 text-2xl font-semibold text-slate-900" {...props} />,
-        h2: ({ ...props }) => <h2 className="mb-3 text-xl font-semibold text-slate-900" {...props} />,
-        h3: ({ ...props }) => <h3 className="mb-2 text-lg font-semibold text-slate-900" {...props} />,
-        p: ({ ...props }) => <p className="whitespace-pre-wrap leading-7 text-slate-800" {...props} />,
-        ul: ({ ...props }) => <ul className="ml-5 list-disc space-y-1 text-slate-800" {...props} />,
-        ol: ({ ...props }) => <ol className="ml-5 list-decimal space-y-1 text-slate-800" {...props} />,
+        h1: ({ ...props }) => <h1 className="mb-4 text-2xl font-semibold text-slate-900 dark:text-slate-100" {...props} />,
+        h2: ({ ...props }) => <h2 className="mb-3 text-xl font-semibold text-slate-900 dark:text-slate-100" {...props} />,
+        h3: ({ ...props }) => <h3 className="mb-2 text-lg font-semibold text-slate-900 dark:text-slate-100" {...props} />,
+        p: ({ ...props }) => <p className="whitespace-pre-wrap leading-7 text-slate-800 dark:text-slate-200" {...props} />,
+        ul: ({ ...props }) => <ul className="ml-5 list-disc space-y-1 text-slate-800 dark:text-slate-200" {...props} />,
+        ol: ({ ...props }) => <ol className="ml-5 list-decimal space-y-1 text-slate-800 dark:text-slate-200" {...props} />,
         code({ className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || "");
           const language = match?.[1];
@@ -80,7 +80,7 @@ export function SongMarkdownContent({ content }: SongMarkdownContentProps) {
 
           return (
             <code
-              className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.82rem] text-slate-800"
+              className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.82rem] text-slate-800 dark:bg-slate-700 dark:text-slate-100"
               {...props}
             >
               {children}

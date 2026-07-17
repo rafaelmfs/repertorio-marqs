@@ -48,14 +48,14 @@ export function SongViewer({ content }: SongViewerProps) {
     <div>
       <div
         ref={songContainerRef}
-        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8"
+        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8 dark:border-slate-700 dark:bg-[#0b1a2f]/70"
       >
         <div className="pb-40 sm:pb-44 text-sm">
           <SongMarkdownContent content={content} />
         </div>
       </div>
 
-      <div className="fixed bottom-4 md:bottom-2 left-1/2 z-40 w-[85vw] max-w-[720px] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-zinc-100/90 p-2 sm:p-3 shadow-lg backdrop-blur-sm">
+      <div className="fixed bottom-4 md:bottom-2 left-1/2 z-40 w-[85vw] max-w-[720px] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-zinc-100/90 p-2 sm:p-3 shadow-lg backdrop-blur-sm dark:border-slate-600 dark:bg-[#10233d]/95">
         <div className="flex flex-col gap-1 sm:gap-2 px-2 py-3">
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             <Button
@@ -81,7 +81,7 @@ export function SongViewer({ content }: SongViewerProps) {
               <IconArrowUp className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               <span className="sm:inline">Topo</span>
             </Button>
-            <span className="ml-auto rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600">
+            <span className="ml-auto rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-200">
               {speedLabel}
             </span>
           </div>
@@ -102,7 +102,7 @@ export function SongViewer({ content }: SongViewerProps) {
           </div>
 
           <div className="flex items-center gap-2">
-            <IconArrowUp className="h-3.5 w-3.5 text-slate-500" />
+            <IconArrowUp className="h-3.5 w-3.5 text-slate-500 dark:text-slate-300" />
             <input
               type="range"
               min={AUTO_SCROLL_SPEED.min}
@@ -112,10 +112,10 @@ export function SongViewer({ content }: SongViewerProps) {
               onChange={(event) => {
                 setSpeedSafe(Number(event.target.value));
               }}
-              className="h-2 w-full cursor-pointer accent-slate-800"
+              className="h-2 w-full cursor-pointer accent-slate-800 dark:accent-blue-400"
               aria-label="Velocidade da rolagem"
             />
-            <IconArrowDown className="h-3.5 w-3.5 text-slate-500" />
+            <IconArrowDown className="h-3.5 w-3.5 text-slate-500 dark:text-slate-300" />
           </div>
         </div>
       </div>

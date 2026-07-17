@@ -82,16 +82,16 @@ export function SongMarkdownComposer() {
 
       {isOpen && isMounted
         ? createPortal(
-          <div className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 bg-slate-950/55 backdrop-blur-sm dark:bg-[#020817]/75">
             <div className="song-scrollbar h-full overflow-y-auto p-3 sm:p-4 md:p-6">
-              <div className="mx-auto w-full max-w-3xl rounded-lg sm:rounded-2xl border border-slate-200 bg-white shadow-xl">
-                <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-5 sm:py-4">
+              <div className="mx-auto w-full max-w-3xl rounded-lg sm:rounded-2xl border border-slate-200 bg-white shadow-xl dark:border-slate-700 dark:bg-[#0f1f36]">
+                <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 sm:px-5 sm:py-4 dark:border-slate-700">
                   <div>
-                    <h2 className="flex items-center gap-2 text-sm sm:text-base font-semibold text-slate-900">
+                    <h2 className="flex items-center gap-2 text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100">
                       <IconFileText className="h-4 w-4" />
                       Gerar markdown da musica
                     </h2>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       Preencha os campos e baixe o arquivo markdown pronto para usar.
                     </p>
                   </div>
@@ -103,7 +103,7 @@ export function SongMarkdownComposer() {
 
                 <div className="space-y-3 sm:space-y-4 px-4 py-4 sm:px-5 sm:py-5">
                   <div className="space-y-1.5 sm:space-y-2">
-                    <label className="text-xs sm:text-sm font-medium text-slate-700" htmlFor="song-title">
+                    <label className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200" htmlFor="song-title">
                       Titulo
                     </label>
                     <Input
@@ -116,7 +116,7 @@ export function SongMarkdownComposer() {
 
                   <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
                     <div className="space-y-1.5 sm:space-y-2">
-                      <label className="text-xs sm:text-sm font-medium text-slate-700" htmlFor="song-artist">
+                      <label className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200" htmlFor="song-artist">
                         Artista
                       </label>
                       <Input
@@ -128,7 +128,7 @@ export function SongMarkdownComposer() {
                     </div>
 
                     <div className="space-y-1.5 sm:space-y-2">
-                      <label className="text-xs sm:text-sm font-medium text-slate-700" htmlFor="song-slug">
+                      <label className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200" htmlFor="song-slug">
                         Slug
                       </label>
                       <Input
@@ -141,7 +141,7 @@ export function SongMarkdownComposer() {
                   </div>
 
                   <div className="space-y-1.5 sm:space-y-2">
-                    <label className="text-xs sm:text-sm font-medium text-slate-700" htmlFor="song-content">
+                    <label className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-200" htmlFor="song-content">
                       Conteudo da cifra
                     </label>
                     <Textarea
@@ -154,7 +154,7 @@ export function SongMarkdownComposer() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 pt-1">
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
                       O markdown abaixo e atualizado automaticamente.
                     </p>
                     <Button type="button" variant="outline" size="sm" onClick={handleDownload}>
@@ -163,13 +163,13 @@ export function SongMarkdownComposer() {
                     </Button>
                   </div>
 
-                  <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-slate-50 p-2 sm:p-4 text-xs leading-5 sm:leading-6 text-slate-800">
+                  <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-slate-50 p-2 sm:p-4 text-xs leading-5 sm:leading-6 text-slate-800 dark:border-slate-700 dark:bg-[#0b1a2f] dark:text-slate-200">
                     {markdown}
                   </pre>
 
                   <div className="space-y-1.5 sm:space-y-2 pt-1">
-                    <p className="text-xs font-medium text-slate-600">Preview limpo da cifra</p>
-                    <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-white p-2 sm:p-4 text-xs sm:text-sm leading-5 sm:leading-7 text-slate-800">
+                    <p className="text-xs font-medium text-slate-600 dark:text-slate-300">Preview limpo da cifra</p>
+                    <pre className="song-scrollbar max-h-48 sm:max-h-72 overflow-auto rounded-lg sm:rounded-xl border border-slate-200 bg-white p-2 sm:p-4 text-xs sm:text-sm leading-5 sm:leading-7 text-slate-800 dark:border-slate-700 dark:bg-[#0b1a2f] dark:text-slate-200">
                       {contentPreview}
                     </pre>
                   </div>

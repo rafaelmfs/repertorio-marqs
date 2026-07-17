@@ -38,7 +38,7 @@ export function SetlistCard({
         {setlist.songs.map((slug, index) => (
           <li
             key={`${setlist.id}-${slug}`}
-            className="flex cursor-pointer justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 items-center"
+            className="flex cursor-pointer justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 items-center dark:border-slate-700 dark:bg-[#0b1a2f]"
             role="link"
             tabIndex={0}
             aria-label={`Abrir musica ${slug}`}
@@ -50,7 +50,7 @@ export function SetlistCard({
               }
             }}
           >
-            <span className="text-sm w-full text-slate-700 md:whitespace-nowrap">{slug}</span>
+            <span className="text-sm w-full text-slate-700 md:whitespace-nowrap dark:text-slate-200">{slug}</span>
             <div
               className="flex  items-center justify-between gap-1"
               onClick={(event) => event.stopPropagation()}

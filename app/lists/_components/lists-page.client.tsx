@@ -62,16 +62,16 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
   return (
     <section className="space-y-6 sm:space-y-8">
       <div className="space-y-2">
-        <h1 className="flex items-center gap-2 text-xl sm:text-2xl font-semibold text-slate-900">
+        <h1 className="flex items-center gap-2 text-xl sm:text-2xl font-semibold text-slate-900 dark:text-slate-100">
           <IconList className="h-5 w-5" />
           Listas
         </h1>
-        <p className="text-xs sm:text-sm text-slate-600">
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
           Crie listas, reorganize a ordem das musicas e abra cada cifra direto por aqui.
         </p>
       </div>
 
-      <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
+      <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
         <div className="flex flex-col gap-2 sm:flex-row">
           <Input
             placeholder="Nome da lista"
@@ -86,11 +86,11 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
       </div>
 
       <div className="flex flex-col gap-3 sm:gap-4">
-        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
           <div className="mb-3 sm:mb-4 flex flex-col md:flex-row md:items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
-              <h2 className="text-base sm:text-lg font-semibold text-slate-900">Listas criadas</h2>
-              <p className="text-xs sm:text-sm text-slate-600">
+              <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">Listas criadas</h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                 Reordene, abra a cifra ou remova musicas.
               </p>
             </div>
@@ -110,11 +110,11 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
           </div>
         </div>
 
-        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
+        <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-700 dark:bg-[#0f1f36]">
           <div className="mb-3 sm:mb-4 flex flex-col md:flex-row items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
-              <h2 className="text-base sm:text-lg font-semibold text-slate-900">Musicas</h2>
-              <p className="text-xs sm:text-sm text-slate-600">
+              <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">Musicas</h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                 Busque uma musica e adicione na lista sem sair desta tela.
               </p>
             </div>
@@ -132,7 +132,7 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
               {query && (
                 <button
                   type="button"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 p-1 text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:hover:text-slate-100"
                   onClick={() => setQuery("")}
                   aria-label="Limpar busca"
                   title="Limpar busca"
