@@ -55,4 +55,20 @@ describe("SetlistCard", () => {
     expect(onRemoveSong).toHaveBeenCalledWith("a", "gratidao");
     expect(push).not.toHaveBeenCalled();
   });
+
+  it("renders a direct link for each song in the list", () => {
+    render(
+      <SetlistCard
+        setlist={{ id: "a", name: "Culto", songs: ["gratidao"] }}
+        onDelete={vi.fn()}
+        onMoveSong={vi.fn()}
+        onRemoveSong={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByRole("link", { name: "Acessar musica gratidao" })).toHaveAttribute(
+      "href",
+      "/songs/gratidao",
+    );
+  });
 });

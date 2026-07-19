@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { IconArrowDown, IconArrowUp, IconTrash } from "@/components/ui/icons";
+import { IconArrowDown, IconArrowUp, IconExternal, IconTrash } from "@/components/ui/icons";
 import type { Setlist } from "@/lib/types/song.types";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 type SetlistCardProps = {
@@ -56,6 +57,15 @@ export function SetlistCard({
               onClick={(event) => event.stopPropagation()}
             >
               <div className="flex items-center gap-1">
+                <Button asChild variant="outline" size="sm" className="min-h-10">
+                  <Link
+                    href={`/songs/${slug}`}
+                    aria-label={`Acessar musica ${slug}`}
+                  >
+                    <IconExternal className="h-3.5 w-3.5" />
+                    <span className="hidden md:inline">Acessar</span>
+                  </Link>
+                </Button>
                 <Button
                   variant="ghost"
                   size="xs"

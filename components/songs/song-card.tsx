@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { IconMusic, IconPlus } from "@/components/ui/icons";
+import { IconExternal, IconMusic, IconPlus } from "@/components/ui/icons";
 import { Select } from "@/components/ui/select";
 import type { SongListItem } from "@/lib/types/song.types";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -108,9 +109,21 @@ export function SongCard({
         ) : null}
       </div>
 
-      <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-300">
-        <IconMusic className="h-3.5 w-3.5" />
-        <span>Arquivo local em Markdown</span>
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-300">
+          <IconMusic className="h-3.5 w-3.5" />
+          <span>Arquivo local em Markdown</span>
+        </div>
+        <Button asChild variant="outline" size="sm" className="min-h-11 shrink-0">
+          <Link
+            href={songHref}
+            onClick={(event) => event.stopPropagation()}
+            aria-label={`Acessar musica ${song.title}`}
+          >
+            <IconExternal className="h-3.5 w-3.5" />
+            Acessar
+          </Link>
+        </Button>
       </div>
     </Card>
   );

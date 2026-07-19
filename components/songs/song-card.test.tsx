@@ -40,6 +40,19 @@ describe("SongCard", () => {
     expect(push).not.toHaveBeenCalled();
   });
 
+  it("renders a direct song link as a second navigation option", () => {
+    render(
+      <SongCard
+        song={{ slug: "gratidao", title: "Gratidao", artist: "Projeto Sola" }}
+      />,
+    );
+
+    expect(screen.getByRole("link", { name: "Acessar musica Gratidao" })).toHaveAttribute(
+      "href",
+      "/songs/gratidao",
+    );
+  });
+
   it("allows choosing target list before adding without redirect", () => {
     const onToggleFavorite = vi.fn();
     const onAddToList = vi.fn();
