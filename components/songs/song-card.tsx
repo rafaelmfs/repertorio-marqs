@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { IconExternal, IconMusic, IconPlus } from "@/components/ui/icons";
 import { Select } from "@/components/ui/select";
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import type { SongListItem } from "@/lib/types/song.types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -27,7 +28,7 @@ export function SongCard({
 }: SongCardProps) {
   const router = useRouter();
   const [selectedSetlistId, setSelectedSetlistId] = useState<string>("");
-  const songHref = `/songs/${song.slug}`;
+  const songHref = APP_ROUTES.song(song.slug);
 
   useEffect(() => {
     if (setlistOptions.length === 0) {

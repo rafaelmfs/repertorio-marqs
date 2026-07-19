@@ -1,4 +1,5 @@
 import { SetlistCard } from "@/components/lists/setlist-card";
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -27,7 +28,7 @@ describe("SetlistCard", () => {
 
     fireEvent.click(screen.getByRole("link", { name: "Abrir musica gratidao" }));
 
-    expect(push).toHaveBeenCalledWith("/songs/gratidao");
+    expect(push).toHaveBeenCalledWith(APP_ROUTES.song("gratidao"));
   });
 
   it("triggers callbacks for song operations", () => {
@@ -68,7 +69,7 @@ describe("SetlistCard", () => {
 
     expect(screen.getByRole("link", { name: "Acessar musica gratidao" })).toHaveAttribute(
       "href",
-      "/songs/gratidao",
+      APP_ROUTES.song("gratidao"),
     );
   });
 });

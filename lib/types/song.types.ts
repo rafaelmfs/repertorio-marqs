@@ -22,9 +22,3 @@ export const STORAGE_KEYS = {
   favorites: "repertorio:favorites",
   setlists: "repertorio:setlists",
 } as const;
-
-export const APP_ROUTES = {
-  home: "/",
-  lists: "/lists",
-  songs: "/songs",
-} as const;

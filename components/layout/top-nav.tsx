@@ -1,7 +1,7 @@
 import { SongMarkdownComposer } from "@/components/layout/song-markdown-composer";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { APP_ROUTES } from "@/lib/types/song.types";
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import Link from "next/link";
 
 export function TopNav() {

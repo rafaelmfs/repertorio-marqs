@@ -1,10 +1,11 @@
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Repertorio de Cifras",
   description: "Aplicacao pessoal para organizar cifras em Markdown",
-  manifest: "/manifest.webmanifest",
+  manifest: APP_ROUTES.manifest,
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

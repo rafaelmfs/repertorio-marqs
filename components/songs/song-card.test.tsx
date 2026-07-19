@@ -1,4 +1,5 @@
 import { SongCard } from "@/components/songs/song-card";
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -26,7 +27,7 @@ describe("SongCard", () => {
 
     fireEvent.click(screen.getByRole("link", { name: "Abrir musica Gratidao" }));
 
-    expect(push).toHaveBeenCalledWith("/songs/gratidao");
+    expect(push).toHaveBeenCalledWith(APP_ROUTES.song("gratidao"));
   });
 
   it("renders content without triggering navigation", () => {
@@ -49,7 +50,7 @@ describe("SongCard", () => {
 
     expect(screen.getByRole("link", { name: "Acessar musica Gratidao" })).toHaveAttribute(
       "href",
-      "/songs/gratidao",
+      APP_ROUTES.song("gratidao"),
     );
   });
 

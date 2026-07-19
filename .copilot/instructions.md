@@ -192,6 +192,7 @@ getSongBySlug(slug: string): Promise<Song>
 - respeitar estrutura de pastas
 - usar filesystem como fonte de dados
 - usar `localStorage` para estado
+- usar constants ao inves de strings soltas no codigo, principalmente para rotas
 
 ### O agente nao deve
 

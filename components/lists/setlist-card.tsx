@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { IconArrowDown, IconArrowUp, IconExternal, IconTrash } from "@/components/ui/icons";
+import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import type { Setlist } from "@/lib/types/song.types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -43,11 +44,11 @@ export function SetlistCard({
             role="link"
             tabIndex={0}
             aria-label={`Abrir musica ${slug}`}
-            onClick={() => router.push(`/songs/${slug}`)}
+            onClick={() => router.push(APP_ROUTES.song(slug))}
             onKeyDown={(event) => {
               if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                router.push(`/songs/${slug}`);
+                router.push(APP_ROUTES.song(slug));
               }
             }}
           >
@@ -59,7 +60,7 @@ export function SetlistCard({
               <div className="flex items-center gap-1">
                 <Button asChild variant="outline" size="sm" className="min-h-10">
                   <Link
-                    href={`/songs/${slug}`}
+                    href={APP_ROUTES.song(slug)}
                     aria-label={`Acessar musica ${slug}`}
                   >
                     <IconExternal className="h-3.5 w-3.5" />
