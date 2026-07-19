@@ -4,7 +4,7 @@ import { SetlistCard } from "@/components/lists/setlist-card";
 import { SongCard } from "@/components/songs/song-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { IconClose, IconList, IconPlus } from "@/components/ui/icons";
+import { IconClose, IconList, IconMusic, IconPlus, IconSearch } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { ToastStack } from "@/components/ui/toast";
 import { useFavorites } from "@/lib/hooks/use-favorites";
@@ -113,7 +113,10 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
         <div className="rounded-lg sm:rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-[#44474c] dark:bg-[#191c20]">
           <div className="mb-3 sm:mb-4 flex flex-col md:flex-row items-end justify-between gap-2 sm:gap-3">
             <div className="space-y-1">
-              <h2 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">Musicas</h2>
+              <h2 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">
+                <IconMusic className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                Musicas
+              </h2>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                 Busque uma musica e adicione na lista sem sair desta tela.
               </p>
@@ -123,11 +126,12 @@ export function ListsPageClient({ songs }: ListsPageClientProps) {
 
           <div className="space-y-2 sm:space-y-3">
             <div className="relative">
+              <IconSearch className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
               <Input
                 placeholder="Buscar musica por titulo ou artista"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                className="pr-10"
+                className="pl-9 pr-10"
               />
               {query && (
                 <button

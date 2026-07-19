@@ -2,7 +2,7 @@
 
 import { SongCard } from "@/components/songs/song-card";
 import { Badge } from "@/components/ui/badge";
-import { IconClose } from "@/components/ui/icons";
+import { IconClose, IconMusic, IconSearch } from "@/components/ui/icons";
 import { Input } from "@/components/ui/input";
 import { ToastStack } from "@/components/ui/toast";
 import { useSetlists } from "@/lib/hooks/use-setlists";
@@ -34,7 +34,8 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
   return (
     <section className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+        <h1 className="flex items-center gap-2 text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+          <IconMusic className="h-5 w-5 text-slate-500 sm:h-6 sm:w-6 dark:text-slate-400" />
           Repertorio de Cifras
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
@@ -47,12 +48,13 @@ export function SongsPageClient({ songs, total }: SongsPageClientProps) {
           Buscar por titulo ou artista
         </label>
         <div className="relative">
+          <IconSearch className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
           <Input
             id="song-search"
             placeholder="Ex.: gratidao"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            className="pr-10"
+            className="pl-9 pr-10"
           />
           {query && (
             <button

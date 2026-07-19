@@ -68,6 +68,23 @@ export function IconArrowDown(props: IconProps) {
   );
 }
 
+export function IconArrowLeft(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="m15 18-6-6 6-6" />
+    </BaseIcon>
+  );
+}
+
+export function IconSearch(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-4-4" />
+    </BaseIcon>
+  );
+}
+
 export function IconStar(props: IconProps) {
   return (
     <BaseIcon {...props}>

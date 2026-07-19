@@ -1,6 +1,7 @@
 import { SongMarkdownComposer } from "@/components/layout/song-markdown-composer";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
+import { IconList, IconMusic } from "@/components/ui/icons";
 import { APP_ROUTES } from "@/lib/constants/routes.constants";
 import Link from "next/link";
 
@@ -17,10 +18,16 @@ export function TopNav() {
           </div>
           <ThemeToggle />
           <Button asChild variant="ghost" size="sm">
-            <Link href={APP_ROUTES.home}>Musicas</Link>
+            <Link href={APP_ROUTES.home}>
+              <IconMusic className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
+              Musicas
+            </Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href={APP_ROUTES.lists}>Listas</Link>
+            <Link href={APP_ROUTES.lists}>
+              <IconList className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
+              Listas
+            </Link>
           </Button>
         </nav>
       </div>
