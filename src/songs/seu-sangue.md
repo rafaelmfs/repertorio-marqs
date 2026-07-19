@@ -1,0 +1,129 @@
+---
+slug: seu-sangue
+title: Seu sangue
+artist: Fernandinho
+---
+
+[Intro] F#m
+
+[Primeira Parte] 
+
+A9             E
+   Seu sangue,   Sua cruz
+F#m7(11)              D
+         Me levam de volta pra Deus
+A9            E
+   Sua morte,   Sua vida
+F#m7(11)            D  
+         As trevas, Ele já venceu
+
+E5              D5     
+   Seu amor me conquistou
+E5             D5
+   Sou eterno devedor
+
+[Pré-Refrão] 
+
+G              D
+  O véu se rasgou
+                    F#m
+Sua luz em mim brilhou
+                  E                  
+Sua glória me cobriu 
+                      Bm  E
+Mais que vencedor eu sou
+                      Bm  E
+Mais que vencedor eu sou
+
+[Refrão] 
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+[Solo] F#m
+
+[Primeira Parte] 
+
+A9             E
+   Seu sangue,   Sua cruz
+F#m7(11)              D
+         Me levam de volta pra Deus
+A9            E
+   Sua morte,   Sua vida
+F#m7(11)            D  
+         As trevas, Ele já venceu
+
+E5              D5     
+   Seu amor me conquistou
+E5             D5
+   Sou eterno devedor
+
+[Pré-Refrão] 
+
+G              D
+  O véu se rasgou
+                    F#m
+Sua luz em mim brilhou
+                  E                  
+Sua glória me cobriu 
+                      Bm  E
+Mais que vencedor eu sou
+                      Bm  E
+Mais que vencedor eu sou
+
+[Refrão] 
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+Sei que na sala do trono está
+
+Eu quero ir pra lá
+
+Pelo novo e vivo caminho
+
+Sei que na sala do trono está
+
+Eu quero ir pra lá
+             Riff       
+Pelo novo e vivo caminho
+
+[Refrão Final]
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+A9                             E 
+   Sei que na sala do trono está
+                 F#m
+Eu quero ir pra lá
+             D9 
+Pelo novo e vivo caminho
+
+[Final] F#m
