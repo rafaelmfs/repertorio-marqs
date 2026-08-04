@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { IconArrowDown, IconArrowUp, IconPause, IconPlay } from "@/components/ui/icons";
 import { useAutoScroll } from "@/lib/hooks/use-auto-scroll";
 import { usePersistentState } from "@/lib/hooks/use-persistent-state";
+import { cn } from "@/lib/utils/cn";
 import {
   AUTO_SCROLL_PRESETS,
   AUTO_SCROLL_SPEED,
@@ -59,8 +60,18 @@ export function SongViewer({ content }: SongViewerProps) {
         </div>
       </div>
 
-      <div className="fixed bottom-4 md:bottom-2 left-1/2 z-40 w-[85vw] max-w-[720px] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-zinc-100/90 p-2 sm:p-3 shadow-lg backdrop-blur-sm dark:border-[#4a4d52] dark:bg-[#20242a]/95">
-        <div className="flex flex-col gap-1 sm:gap-2 px-2 py-3">
+      <div
+        className={cn(
+          "fixed bottom-4 md:bottom-2 left-1/2 z-40 w-[85vw] max-w-[720px] -translate-x-1/2 rounded-lg sm:rounded-xl border border-slate-200 bg-zinc-100/90 p-2 sm:p-3 shadow-lg backdrop-blur-sm dark:border-[#4a4d52] dark:bg-[#20242a]/95",
+          isAutoScrolling && "w-auto max-w-[calc(100vw-2rem)] p-2 sm:p-2",
+        )}
+      >
+        <div
+          className={cn(
+            "flex flex-col gap-1 sm:gap-2 px-2 py-3",
+            isAutoScrolling && "gap-1 sm:gap-1 py-1",
+          )}
+        >
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
             <Button
               type="button"
@@ -81,16 +92,35 @@ export function SongViewer({ content }: SongViewerProps) {
                 </>
               )}
             </Button>
-            <Button type="button" variant="ghost" size="sm" className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3" onClick={handleBackToTop}>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className={cn(
+                "text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3",
+                isAutoScrolling && "hidden",
+              )}
+              onClick={handleBackToTop}
+            >
               <IconArrowUp className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               <span className="sm:inline">Topo</span>
             </Button>
-            <span className="ml-auto rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-200">
+            <span
+              className={cn(
+                "ml-auto rounded-full bg-slate-100 px-1.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-200",
+                isAutoScrolling && "hidden",
+              )}
+            >
               {speedLabel}
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-1 sm:gap-2">
+          <div
+            className={cn(
+              "flex flex-wrap items-center gap-1 sm:gap-2",
+              isAutoScrolling && "hidden",
+            )}
+          >
             {AUTO_SCROLL_PRESETS.map((preset) => (
               <Button
                 key={preset.label}
@@ -116,7 +146,10 @@ export function SongViewer({ content }: SongViewerProps) {
               onChange={(event) => {
                 setSpeedSafe(Number(event.target.value));
               }}
-              className="h-2 w-full cursor-pointer accent-slate-800 dark:accent-blue-400"
+              className={cn(
+                "h-2 w-full cursor-pointer accent-slate-800 dark:accent-blue-400",
+                isAutoScrolling && "w-40 sm:w-56",
+              )}
               aria-label="Velocidade da rolagem"
             />
             <IconArrowDown className="h-3.5 w-3.5 text-slate-500 dark:text-slate-300" />

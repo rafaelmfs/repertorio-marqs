@@ -42,6 +42,23 @@ describe("SongViewer", () => {
     );
   });
 
+  it("compacts controls while auto-scroll is active on every screen", () => {
+    render(<SongViewer content="Linha 1" />);
+
+    fireEvent.click(screen.getByRole("button", { name: "Iniciar" }));
+
+    expect(screen.getByRole("button", { name: "Pausar" })).not.toHaveClass("hidden");
+    expect(screen.getByRole("button", { name: "Topo" })).toHaveClass("hidden");
+    expect(screen.getByText("20px/s")).toHaveClass("hidden");
+    expect(screen.getByRole("button", { name: "Rapida" }).parentElement).toHaveClass("hidden");
+
+    fireEvent.click(screen.getByRole("button", { name: "Pausar" }));
+
+    expect(screen.getByRole("button", { name: "Topo" })).not.toHaveClass("hidden");
+    expect(screen.getByText("20px/s")).not.toHaveClass("hidden");
+    expect(screen.getByRole("button", { name: "Rapida" }).parentElement).not.toHaveClass("hidden");
+  });
+
   it("updates speed through preset and range controls", () => {
     render(<SongViewer content="Linha 1" />);
 
