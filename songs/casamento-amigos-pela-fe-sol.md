@@ -1,0 +1,138 @@
+---
+slug: casamento-amigos-pela-fe-sol
+title: CASAMENTO - Amigos Pela Fé - SOL
+artist: Anjos de Resgate
+---
+
+[Intro] G  Em  C9  D
+
+[Primeira Parte]
+
+
+G          D/F# Em         D C9
+  Quem me da___rá um ombro amigo
+
+            D
+Quando eu precisar?
+
+G         D/F# Em         D   C9
+  E se eu ca___ir, se eu vacilar
+
+             D
+Quem vai me levantar?
+
+
+    Am              G/B
+Sou eu, quem vai ouvir você
+
+          C9                      D
+Quando o mundo não puder te entender
+
+     Am                 G/B
+Foi Deus, quem te escolheu pra ser
+
+      C9                       D
+O melhor amigo que eu pudesse ter
+
+[Refrão]
+
+
+G    D/F#  Em           D
+  Amigo.....os pra sempre
+
+       C            Am         D
+Bons amigos que nasceram pela fé
+
+G    D/F#  Em           D
+  Amigo.....os pra sempre
+
+      Am            D7(4)
+Para sempre amigos sim
+
+Se Deus quiser
+
+
+[Intro – Variação]
+
+[Segunda Parte]
+
+
+  G  D/F#   Em       D  C9
+Quem é que vai  me acolher
+
+            D
+Na minha indecisão
+
+ G        D/F# Em      D C9
+Se eu me per_der pelo caminho
+
+             D
+Quem me dará a mão
+
+
+     Am               G/B
+Foi Deus, quem consagrou
+
+Você e eu
+
+      C9
+Para sermos bons amigos
+
+            D
+Num só coração
+
+    Am           G/B
+Por isso eu estarei aqui
+
+        C9
+Quando tudo parecer
+
+         D
+Sem solução
+
+[Ponte]
+
+
+Bb                     F
+   Peço a Deus que te guarde
+
+(Que te guarde, abençoe
+E mostre a sua face)
+
+Bb                D4
+   E te dê a sua paz
+
+[Refrão]
+
+
+G   D/F#  Em            D
+  Amigo.....os pra sempre
+
+       C            Am         D
+Bons amigos que nasceram pela fé
+
+G   D/F#  Em            D
+  Amigo.....os pra sempre
+
+      Am            D7(4)
+Para sempre amigos sim
+
+    G         (D)
+Se Deus quiser
+
+
+G    D/F#  Em           D
+  Amigo.....os pra sempre
+
+       C           Am          D
+Bons amigos que nasceram pela fé
+
+G   D/F#  Em            D
+  Amigo.....os pra sempre
+
+      Am            D7(4)
+Para sempre amigos sim
+
+Se Deus quiser
+
+[Final]
