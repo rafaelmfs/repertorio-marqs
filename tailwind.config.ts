@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
+  // Safari 10 (iPad 4) does not support :is(), which Tailwind emits for
+  // the legacy "class" mode. Use an explicit descendant selector instead.
+  darkMode: ["variant", ".dark &"],
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",

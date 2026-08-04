@@ -130,6 +130,12 @@ summary,
   scrollbar-color: rgba(100, 116, 139, 0.35) transparent;
 }
 
+/* iOS 10 requires the WebKit scrolling mode for touch scrolling inside a
+   nested overflow container (the iPad 4 Safari engine). */
+.song-content-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
 .song-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;

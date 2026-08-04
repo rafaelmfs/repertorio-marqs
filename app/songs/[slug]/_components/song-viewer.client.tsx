@@ -40,7 +40,11 @@ export function SongViewer({ content }: SongViewerProps) {
   }
 
   function handleBackToTop() {
-    songContainerRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    // Safari on iOS 10 does not support the ScrollToOptions object reliably.
+    // Assigning scrollTop works both there and in current browsers.
+    if (songContainerRef.current) {
+      songContainerRef.current.scrollTop = 0;
+    }
     setIsAutoScrolling(false);
   }
 
@@ -48,7 +52,7 @@ export function SongViewer({ content }: SongViewerProps) {
     <div>
       <div
         ref={songContainerRef}
-        className="song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8 dark:border-[#44474c] dark:bg-[#15181c]/90"
+        className="song-content-scroll song-scrollbar max-h-[calc(100vh-11rem)] overflow-y-auto rounded-lg sm:rounded-xl border border-slate-100 bg-slate-50/40 py-2 px-4 sm:py-4 sm:px-8 dark:border-[#44474c] dark:bg-[#15181c]/90"
       >
         <div className="pb-40 sm:pb-44 text-sm">
           <SongMarkdownContent content={content} />
