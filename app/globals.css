@@ -136,6 +136,16 @@ summary,
   -webkit-overflow-scrolling: touch;
 }
 
+/* Older iOS Safari is more reliable when the nested scroll region has a
+   concrete height instead of only a max-height. */
+@supports (-webkit-overflow-scrolling: touch) {
+  .song-content-scroll {
+    height: calc(100vh - 11rem);
+    max-height: none;
+    overflow-y: scroll;
+  }
+}
+
 .song-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -162,4 +172,33 @@ summary,
 .dark html::-webkit-scrollbar-thumb,
 .dark .song-scrollbar::-webkit-scrollbar-thumb {
   background: rgba(148, 163, 184, 0.36);
+}
+
+/* Tailwind's generated rgb() color syntax is not understood by Safari 10.
+   Keep a legacy-color fallback for the dark utilities used by the app. */
+@supports not (color: rgb(0 0 0 / 1)) {
+  .dark [class~="dark:bg-[#090a0c]/85"] { background-color: #090a0c; }
+  .dark [class~="dark:bg-[#15181c]"] { background-color: #15181c; }
+  .dark [class~="dark:bg-[#15181c]/90"] { background-color: #15181c; }
+  .dark [class~="dark:bg-[#16191d]/95"] { background-color: #16191d; }
+  .dark [class~="dark:bg-[#182522]/95"] { background-color: #182522; }
+  .dark [class~="dark:bg-[#191c20]"] { background-color: #191c20; }
+  .dark [class~="dark:bg-[#20242a]"] { background-color: #20242a; }
+  .dark [class~="dark:bg-[#20242a]/95"] { background-color: #20242a; }
+  .dark [class~="dark:bg-[#252a31]"] { background-color: #252a31; }
+  .dark [class~="dark:bg-blue-600"] { background-color: #2563eb; }
+  .dark [class~="dark:bg-emerald-900"] { background-color: #064e3b; }
+  .dark [class~="dark:bg-slate-700"] { background-color: #334155; }
+
+  .dark [class~="dark:border-[#426056]"] { border-color: #426056; }
+  .dark [class~="dark:border-[#44474c]"] { border-color: #44474c; }
+  .dark [class~="dark:border-[#4a4d52]"] { border-color: #4a4d52; }
+
+  .dark [class~="dark:text-emerald-200"] { color: #a7f3d0; }
+  .dark [class~="dark:text-emerald-300"] { color: #6ee7b7; }
+  .dark [class~="dark:text-slate-100"] { color: #f1f5f9; }
+  .dark [class~="dark:text-slate-200"] { color: #e2e8f0; }
+  .dark [class~="dark:text-slate-300"] { color: #cbd5e1; }
+  .dark [class~="dark:text-slate-400"] { color: #94a3b8; }
+  .dark [class~="dark:text-slate-500"] { color: #64748b; }
 }
