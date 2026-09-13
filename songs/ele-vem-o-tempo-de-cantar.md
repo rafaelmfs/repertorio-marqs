@@ -34,7 +34,7 @@ como a neve
              D                A9
 E os seus cabelos, os seus cabelos são brancos
 G Bm  A
-omo a neve
+como a neve
 
               D                 A9       Em  G A
 E nos seus olhos, e nos seus olhos há fogo
