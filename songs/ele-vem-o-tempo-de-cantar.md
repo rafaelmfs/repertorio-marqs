@@ -20,23 +20,23 @@ G                   Bm A
 O tempo de dançar chegou
 
 
-       D          A9                  G  Bm A9
+       D          A9                  G 
 E Ele vem, e Ele vem saltando pelos montes
 
-       D          A9                  G  Bm  A9
+       D          A9                  G  
 E Ele vem, e Ele vem saltando pelos montes
 
                D              A9
 E os seus cabelos, os seus cabelos são brancos
-G Bm  A
+G
 como a neve
 
              D                A9
 E os seus cabelos, os seus cabelos são brancos
-G Bm  A
+G
 como a neve
 
-              D                 A9       Em  G A
+              D                 A9      G 
 E nos seus olhos, e nos seus olhos há fogo
 
 
